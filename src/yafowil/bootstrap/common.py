@@ -36,4 +36,4 @@ BOOTSTRAP_MAKROS = {
 }
 
 for name, value in BOOTSTRAP_MAKROS.items():
-    factory.register_makro(name, value['chain'], value['props'])
+    factory.register_macro(name, value['chain'], value['props'])
