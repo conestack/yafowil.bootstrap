@@ -30,7 +30,7 @@ BOOTSTRAP_PLANS = {
     'button': {
         'chain': ['submit'],
         'props': {
-            'submit.class': 'btn',
+            'submit.class': 'btn btn-primary',
         }
     },
 }
