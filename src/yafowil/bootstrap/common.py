@@ -12,7 +12,7 @@ factory.register(
     display_renderers=[div_renderer])
 
 
-BOOTSTRAP_MAKROS = {
+BOOTSTRAP_MACROS = {
     'form': {
         'chain': 'form',
         'props': {
@@ -35,5 +35,5 @@ BOOTSTRAP_MAKROS = {
     },
 }
 
-for name, value in BOOTSTRAP_MAKROS.items():
-    factory.register_makro(name, value['chain'], value['props'])
+for name, value in BOOTSTRAP_MACROS.items():
+    factory.register_macro(name, value['chain'], value['props'])
