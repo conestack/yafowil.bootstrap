@@ -12,15 +12,15 @@ factory.register(
     display_renderers=[div_renderer])
 
 
-BOOTSTRAP_PLANS = {
+BOOTSTRAP_MAKROS = {
     'form': {
-        'chain': ['form'],
+        'chain': 'form',
         'props': {
             'form.class': 'form-horizontal',
         }
     },
     'field': {
-        'chain': ['field:label:bs_controls'],
+        'chain': 'field:label:bs_controls',
         'props': {
             'field.class': 'control-group',
             'label.class': 'control-label',
@@ -28,12 +28,12 @@ BOOTSTRAP_PLANS = {
         }
     },
     'button': {
-        'chain': ['submit'],
+        'chain': 'submit',
         'props': {
             'submit.class': 'btn btn-primary',
         }
     },
 }
 
-for name, value in BOOTSTRAP_PLANS.items():
-    factory.register_plan(name, value['chain'], value['props'])
+for name, value in BOOTSTRAP_MAKROS.items():
+    factory.register_makro(name, value['chain'], value['props'])
