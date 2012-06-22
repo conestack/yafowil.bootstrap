@@ -24,7 +24,7 @@ def bs_controls_renderer(widget, data):
     if data.errors:
         msgs = [error.message for error in data.errors]
         rendered += data.tag('span', ', '.join(msgs), class_='help-inline')
-    if widget.attrs['help']:
+    if widget.attrs.get('help'):
         rendered += data.tag('p', widget.attrs['help'], class_='help-block')
     return data.tag('div', rendered, **attrs)
 
@@ -55,8 +55,8 @@ BOOTSTRAP_MACROS = {
             'field.class': 'control-group',
             'field.class_add': bs_field_error_class,
             'label.class': 'control-label',
+            'label.help': None,
             'bs_controls.class': 'controls',
-            'bs_controls.help': None,
         }
     },
     'button': {
