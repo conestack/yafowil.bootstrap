@@ -12,6 +12,12 @@ factory.register(
     display_renderers=[div_renderer])
 
 
+def bs_field_error_class(widget, data):
+    if data.errors:
+        return 'error'
+    return ''
+
+
 BOOTSTRAP_MACROS = {
     'form': {
         'chain': 'form',
@@ -23,6 +29,7 @@ BOOTSTRAP_MACROS = {
         'chain': 'field:label:bs_controls',
         'props': {
             'field.class': 'control-group',
+            'field.class_add': bs_field_error_class,
             'label.class': 'control-label',
             'bs_controls.class': 'controls',
         }
@@ -30,7 +37,7 @@ BOOTSTRAP_MACROS = {
     'button': {
         'chain': 'submit',
         'props': {
-            'submit.class': 'btn btn-primary',
+            'submit.class': 'btn',
         }
     },
 }
