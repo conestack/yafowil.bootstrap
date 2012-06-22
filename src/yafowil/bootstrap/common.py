@@ -37,3 +37,6 @@ BOOTSTRAP_MAKROS = {
 
 for name, value in BOOTSTRAP_MAKROS.items():
     factory.register_macro(name, value['chain'], value['props'])
+
+factory.defaults['select.label_radio_class'] = 'radio'
+factory.defaults['select.label_checkbox_class'] = 'checkbox'
