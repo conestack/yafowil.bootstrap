@@ -31,7 +31,7 @@ BOOTSTRAP_MACROS = {
         }
     },
     'field': {
-        'chain': 'field:label:bs_controls:error:help',
+        'chain': 'field:label:bs_controls:help:error',
         'props': {
             'field.class': 'control-group',
             'field.class_add': bs_field_error_class,
