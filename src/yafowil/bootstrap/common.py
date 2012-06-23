@@ -3,11 +3,6 @@ from yafowil.compound import (
     hybrid_extractor,
     div_renderer,
 )
-from yafowil.utils import (
-    cssclasses,
-    css_managed_props,
-    managedprops,
-)
 
 
 factory.register(
