@@ -4,6 +4,7 @@ from yafowil.compound import (
     div_renderer,
 )
 
+factory.theme = 'bootstrap'
 
 factory.register(
     'bs_controls',
