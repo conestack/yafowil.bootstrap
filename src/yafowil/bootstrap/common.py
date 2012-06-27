@@ -48,6 +48,14 @@ BOOTSTRAP_MACROS = {
             'submit.class': 'btn',
         }
     },
+    
+    # yafowil.widget.array
+    'array': {
+        'chain': 'array',
+        'props': {
+            'array.table_class': 'table table-bordered table-condensed',
+        }
+    },
 }
 
 for name, value in BOOTSTRAP_MACROS.items():

@@ -41,7 +41,5 @@ setup(name='yafowil.bootstrap',
       entry_points="""
       [yafowil.plugin]
       register = yafowil.bootstrap:register
-      resourcedir = yafowil.bootstrap:get_resource_dir
-      stylesheets = yafowil.bootstrap:get_css
       """,
       )

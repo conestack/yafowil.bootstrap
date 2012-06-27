@@ -19,15 +19,3 @@ def register():
     import common    
     factory.register_theme('bootstrap', 'yafowil.bootstrap',
                            resourcedir, css=css)
-
-
-###############################################################################
-# XXX: outdated below
-###############################################################################
-
-def get_resource_dir():
-    return resourcedir
-
-
-def get_css():
-    return css
