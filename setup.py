@@ -6,7 +6,7 @@ shortdesc = 'Bootstrap Styles for YAFOWIL'
 longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'LICENSE.rst')).read()
-tests_require = ['yafowil[test]', 'yafowil.webob']
+tests_require = ['yafowil[test]']
 
 setup(name='yafowil.bootstrap',
       version=version,
