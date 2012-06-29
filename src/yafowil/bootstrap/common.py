@@ -1,5 +1,4 @@
 from yafowil.base import factory
-from yafowil.utils import cssclasses
 
 
 factory.theme = 'bootstrap'
@@ -13,6 +12,7 @@ factory.defaults['array.table_class'] = 'table table-bordered table-condensed'
 factory.defaults['dict.table_class'] = 'dictwidget table table-bordered ' +\
                                        'table-condensed'
 
+
 def bs_controls_renderer(widget, data):
     return data.tag('div', data.rendered, class_='controls')
 
@@ -21,6 +21,7 @@ factory.register(
     extractors=[],
     edit_renderers=[bs_controls_renderer],
     display_renderers=[bs_controls_renderer])
+
 
 def bs_field_class(widget, data):
     if data.errors:
