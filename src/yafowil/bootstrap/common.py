@@ -12,6 +12,9 @@ factory.defaults['array.table_class'] = 'table table-bordered table-condensed'
 factory.defaults['dict.table_class'] = 'dictwidget table table-bordered ' +\
                                        'table-condensed'
 
+# yafowil.widget.datetime
+factory.defaults['datetime.datepicker_class'] = 'datepicker input-medium'
+factory.defaults['datetime.timepicker_class'] = 'timepicker input-small'
 
 def bs_controls_renderer(widget, data):
     return data.tag('div', data.rendered, class_='controls')
