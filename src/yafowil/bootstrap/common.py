@@ -1,23 +1,31 @@
 from yafowil.base import factory
-from yafowil.compound import (
-    hybrid_extractor,
-    div_renderer,
-)
+from yafowil.utils import cssclasses
+
 
 factory.theme = 'bootstrap'
+factory.defaults['select.label_radio_class'] = 'radio'
+factory.defaults['select.label_checkbox_class'] = 'checkbox'
+
+# yafowil.widget.array
+factory.defaults['array.table_class'] = 'table table-bordered table-condensed'
+
+# yafowil.widget.dict
+factory.defaults['dict.table_class'] = 'dictwidget table table-bordered ' +\
+                                       'table-condensed'
+
+def bs_controls_renderer(widget, data):
+    return data.tag('div', data.rendered, class_='controls')
 
 factory.register(
     'bs_controls',
-    extractors=[hybrid_extractor],
-    edit_renderers=[div_renderer],
-    display_renderers=[div_renderer])
+    extractors=[],
+    edit_renderers=[bs_controls_renderer],
+    display_renderers=[bs_controls_renderer])
 
-
-def bs_field_error_class(widget, data):
+def bs_field_class(widget, data):
     if data.errors:
-        return 'error'
-    return ''
-
+        return 'control-group error'
+    return 'control-group'
 
 BOOTSTRAP_MACROS = {
     'form': {
@@ -29,8 +37,7 @@ BOOTSTRAP_MACROS = {
     'field': {
         'chain': 'field:label:bs_controls:help:error',
         'props': {
-            'field.class': 'control-group',
-            'field.class_add': bs_field_error_class,
+            'field.class': bs_field_class,
             'label.class': 'control-label',
             'label.help': None,
             'error.position': 'after',
@@ -39,7 +46,6 @@ BOOTSTRAP_MACROS = {
             'help.position': 'after',
             'help.tag': 'p',
             'help.class': 'help-block',
-            'bs_controls.class': 'controls',
         }
     },
     'button': {
@@ -48,18 +54,7 @@ BOOTSTRAP_MACROS = {
             'submit.class': 'btn',
         }
     },
-    
-    # yafowil.widget.array
-    'array': {
-        'chain': 'array',
-        'props': {
-            'array.table_class': 'table table-bordered table-condensed',
-        }
-    },
 }
 
 for name, value in BOOTSTRAP_MACROS.items():
     factory.register_macro(name, value['chain'], value['props'])
-
-factory.defaults['select.label_radio_class'] = 'radio'
-factory.defaults['select.label_checkbox_class'] = 'checkbox'
