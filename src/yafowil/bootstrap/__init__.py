@@ -2,15 +2,16 @@ import os
 from yafowil.base import factory
 
 
+# XXX: use fanstatic
 resourcedir = os.path.join(os.path.dirname(__file__), 'resources')
 
 css = [{
+    'group': 'bootstrap',
     'resource': os.path.join('css', 'bootstrap.css'),
-    'thirdparty': True,
     'order': 10,
 }, {
+    'group': 'bootstrap',
     'resource': os.path.join('css', 'bootstrap-responsive.css'),
-    'thirdparty': True,
     'order': 11,
 }]
 
