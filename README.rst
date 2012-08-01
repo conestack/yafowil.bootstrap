@@ -5,10 +5,10 @@ This is the **bootstrap styles integration** for for `YAFOWIL
 Contributors
 ============
 
-- Robert Niederrreiter <rnix@squarewave.at>
+- Robert Niederrreiter <rnix [at] squarewave [dot] at>
 
-- Jens Klein <jens@bluedynamics.com>
+- Jens Klein <jens [at] bluedynamics [dot] com>
 
-- Johannes Raggam <johannes@raggam.co.at>
+- Johannes Raggam <johannes [at] raggam [dot] co [dot] at>
 
-- Peter Holzer <peter.holzer@agitator.com>
+- Peter Holzer <peter.holzer [at] agitator [dot] com>

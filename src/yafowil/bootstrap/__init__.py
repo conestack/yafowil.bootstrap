@@ -17,6 +17,6 @@ css = [{
 
 
 def register():
-    import common    
+    import common
     factory.register_theme('bootstrap', 'yafowil.bootstrap',
                            resourcedir, css=css)
