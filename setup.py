@@ -7,6 +7,7 @@ longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'LICENSE.rst')).read()
 tests_require = ['yafowil[test]']
+fanstatic_require = ['js.bootstrap']
 
 setup(name='yafowil.bootstrap',
       version=version,
@@ -36,6 +37,7 @@ setup(name='yafowil.bootstrap',
       tests_require=tests_require,
       extras_require = dict(
           test=tests_require,
+          fanstatic=fanstatic_require,
       ),
       test_suite="yafowil.bootstrap.tests.test_suite",
       entry_points="""
