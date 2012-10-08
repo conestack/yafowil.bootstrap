@@ -3,6 +3,15 @@ This is the **bootstrap styles integration** for for `YAFOWIL
 
 For more information: `YAFOWIL Documentation <http://yafowil.info/>`_
 
+Source Code
+===========
+
+The sources are in a GIT DVCS with its main branches at
+`github <http://github.com/bluedynamics/yafowil.bootstrap>`_.
+
+We'd be happy to see many forks and pull-requests to make YAFOWIL even better.
+
+
 Contributors
 ============
 
