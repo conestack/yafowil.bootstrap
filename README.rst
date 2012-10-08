@@ -1,6 +1,7 @@
 This is the **bootstrap styles integration** for for `YAFOWIL 
 <http://pypi.python.org/pypi/yafowil>`_ - Yet Another Form Widget Library.
 
+For more information: `YAFOWIL Documentation <http://yafowil.info/>`_
 
 Contributors
 ============
