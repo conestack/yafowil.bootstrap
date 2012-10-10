@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '1.0dev'
+version = '1.0'
 shortdesc = 'Bootstrap Styles for YAFOWIL'
 longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()
@@ -23,7 +23,7 @@ setup(name='yafowil.bootstrap',
       author='BlueDynamics Alliance',
       author_email='dev@bluedynamics.com',
       url=u'https://github.com/bluedynamics/yafowil.bootstrap',
-      license='Simplified BSD',
+      license='BSD',
       packages=find_packages('src'),
       package_dir = {'': 'src'},
       namespace_packages=['yafowil'],
