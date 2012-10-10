@@ -1,2 +1,3 @@
 *.pyc
 src/yafowil.bootstrap.egg-info/
+dist
