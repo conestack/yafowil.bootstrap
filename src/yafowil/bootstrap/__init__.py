@@ -3,6 +3,11 @@ from yafowil.base import factory
 
 
 resourcedir = os.path.join(os.path.dirname(__file__), 'resources')
+js = [{
+    'group': 'bootstrap',
+    'resource': os.path.join('js', 'bootstrap.js'),
+    'order': 20,
+}]
 css = [{
     'group': 'bootstrap',
     'resource': os.path.join('css', 'bootstrap.css'),
@@ -17,4 +22,4 @@ css = [{
 def register():
     import common
     factory.register_theme('bootstrap', 'yafowil.bootstrap',
-                           resourcedir, css=css)
+                           resourcedir, js=js, css=css)
