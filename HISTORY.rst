@@ -2,12 +2,14 @@
 History
 =======
 
-1.1
----
+1.1dev
+------
 
-- Register the bootstrap.js javascript too. [thet]
+- Register the bootstrap.js javascript too.
+  [thet]
 
 1.0
 ---
 
-- make it work [jensens, rnix, thet, et al.]
+- make it work
+  [rnix, jensens, thet, et al.]
