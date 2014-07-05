@@ -2,8 +2,8 @@
 History
 =======
 
-1.1dev
-------
+1.1
+---
 
 - Register the bootstrap.js javascript too.
   [thet]
