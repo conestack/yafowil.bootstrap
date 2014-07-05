@@ -2,6 +2,12 @@
 History
 =======
 
+1.2dev
+------
+
+- Update to bootstrap 3.2.
+  [rnix]
+
 1.1
 ---
 

@@ -16,6 +16,7 @@ factory.defaults['dict.table_class'] = 'dictwidget table table-bordered ' +\
 factory.defaults['datetime.datepicker_class'] = 'datepicker input-medium'
 factory.defaults['datetime.timepicker_class'] = 'timepicker input-small'
 
+
 def bs_controls_renderer(widget, data):
     return data.tag('div', data.rendered, class_='controls')
 
@@ -59,6 +60,7 @@ BOOTSTRAP_MACROS = {
         }
     },
 }
+
 
 for name, value in BOOTSTRAP_MACROS.items():
     factory.register_macro(name, value['chain'], value['props'])
