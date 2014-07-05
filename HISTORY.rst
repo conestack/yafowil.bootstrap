@@ -5,6 +5,9 @@ History
 1.2dev
 ------
 
+- Rename resource group ``bootstrap`` to ``bootstrap.dependencies``.
+  [rnix]
+
 - Remove bootstrap macros for yafowil and set factory defaults for common
   widgets where appropriate.
   [rnix]
