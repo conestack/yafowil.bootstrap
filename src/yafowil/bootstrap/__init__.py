@@ -4,17 +4,17 @@ from yafowil.base import factory
 
 resourcedir = os.path.join(os.path.dirname(__file__), 'resources')
 js = [{
-    'group': 'bootstrap',
-    'resource': os.path.join('js', 'bootstrap.js'),
+    'group': 'bootstrap.dependencies',
+    'resource': 'js/bootstrap.js',
     'order': 20,
 }]
 css = [{
-    'group': 'bootstrap',
-    'resource': os.path.join('css', 'bootstrap.css'),
+    'group': 'bootstrap.dependencies',
+    'resource': 'css/bootstrap.css',
     'order': 10,
 }, {
-    'group': 'bootstrap',
-    'resource': os.path.join('css', 'bootstrap-responsive.css'),
+    'group': 'bootstrap.dependencies',
+    'resource': 'css/bootstrap-theme.css',
     'order': 11,
 }]
 
