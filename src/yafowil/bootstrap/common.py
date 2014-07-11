@@ -3,9 +3,9 @@ from yafowil.base import factory
 
 
 def bs_field_class(widget, data):
-        if data.errors:
-            return 'form-group has-error'
-        return 'form-group'
+    if data.errors:
+        return 'form-group has-error'
+    return 'form-group'
 
 
 def configure_factory():
@@ -21,13 +21,9 @@ def configure_factory():
 
     factory.defaults['password.class'] = 'password form-control'
 
-    #factory.defaults['checkbox.class'] = 'checkbox form-control'
-
     factory.defaults['select.class'] = 'select form-control'
     factory.defaults['select.label_radio_class'] = 'radio'
     factory.defaults['select.label_checkbox_class'] = 'checkbox'
-
-    factory.defaults['file.class'] = 'file form-control'
 
     factory.defaults['submit.class'] = 'btn btn-default'
 
