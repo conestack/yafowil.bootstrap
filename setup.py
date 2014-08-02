@@ -46,4 +46,5 @@ setup(name='yafowil.bootstrap',
       entry_points="""
       [yafowil.plugin]
       register = yafowil.bootstrap:register
+      configure = yafowil.bootstrap:configure
       """)

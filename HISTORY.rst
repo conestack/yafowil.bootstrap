@@ -5,6 +5,9 @@ History
 1.2dev
 ------
 
+- Use ``configure`` entry point for theme configuration.
+  [rnix]
+
 - Rename resource group ``bootstrap`` to ``bootstrap.dependencies``.
   [rnix]
 

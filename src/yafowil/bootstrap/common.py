@@ -1,4 +1,3 @@
-import os
 from yafowil.base import factory
 
 
@@ -63,7 +62,3 @@ def configure_factory():
 
     # yafowil.widget.wysihtml5
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
-
-# only configure factory if not supressed explicit
-if not os.environ.get('TESTRUN_MARKER'):
-    configure_factory()
