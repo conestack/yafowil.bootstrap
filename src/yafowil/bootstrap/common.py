@@ -65,5 +65,5 @@ def configure_factory():
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
 
 # only configure factory if not supressed explicit
-if not os.environ.get('YAFOWIL_FORCE_DEFAULTS'):
+if not os.environ.get('TESTRUN_MARKER'):
     configure_factory()
