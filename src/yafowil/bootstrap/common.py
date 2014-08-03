@@ -51,11 +51,11 @@ def configure_factory():
 
     # yafowil.widget.array
     factory.defaults['array.table_class'] = \
-        'table table-bordered table-condensed'
+        'table table-condensed'
 
     # yafowil.widget.dict
     factory.defaults['dict.table_class'] = \
-        'dictwidget table table-bordered table-condensed'
+        'dictwidget table table-condensed'
 
     # yafowil.widget.datetime
     factory.defaults['datetime.datepicker_class'] = 'datepicker input-medium'
@@ -66,27 +66,44 @@ def configure_factory():
 
 
 def register_macros():
-    macros = {
-        'form': {
-            'chain': 'form',
-            'props': {
-                'form.class': 'form-horizontal',
-            }
-        },
-        'field': {
-            'chain': 'field:label:div:help:error',
-            'props': {
-                'label.class_add': 'col-sm-2',
-                'div.class_add': 'col-sm-10',
-            }
-        },
-        'button': {
-            'chain': 'submit',
-            'props': {
-                'submit.class': 'btn',
-                'submit.class_add': 'btn-default',
-            }
-        },
+    macros = dict()
+    macros['form'] = {
+        'chain': 'form',
+        'props': {
+            'form.class': 'form-horizontal',
+        }
     }
+    macros['field'] = {
+        'chain': 'field:label:div:help:error',
+        'props': {
+            'label.class_add': 'col-sm-2',
+            'div.class_add': 'col-sm-10',
+        }
+    }
+    macros['button'] = {
+        'chain': 'submit',
+        'props': {
+            'submit.class': 'btn',
+            'submit.class_add': 'btn-default',
+        }
+    }
+
+    # yafowil.widget.array
+    macros['array'] = {
+        'chain': 'field:label:help:error:array',
+        'props': {
+            'array.label': ' ',
+            'field.class': 'form-group',
+            'label.class_add': 'col-sm-2',
+            'array.class_add': 'col-sm-10',
+            'help.class_add': 'col-sm-offset-2 col-sm-10',
+            'error.class_add': 'col-sm-offset-2 col-sm-10',
+        }
+    }
+    macros['arrayfield'] = {
+        'chain': 'field:label:help:error',
+        'props': {}
+    }
+
     for name, value in macros.items():
         factory.register_macro(name, value['chain'], value['props'])
