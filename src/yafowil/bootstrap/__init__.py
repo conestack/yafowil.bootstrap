@@ -1,6 +1,9 @@
 import os
 from yafowil.base import factory
-from yafowil.bootstrap.common import configure_factory
+from yafowil.bootstrap.common import (
+    configure_factory,
+    register_macros,
+)
 
 
 resourcedir = os.path.join(os.path.dirname(__file__), 'resources')
@@ -29,3 +32,4 @@ def configure():
     # only configure factory if not suppressed explicit
     if not os.environ.get('TESTRUN_MARKER'):
         configure_factory()
+        register_macros()

@@ -20,9 +20,10 @@ def configure_factory():
 
     factory.defaults['password.class'] = 'password form-control'
 
-    factory.defaults['select.class'] = 'select form-control'
-    factory.defaults['select.label_radio_class'] = 'radio'
-    factory.defaults['select.label_checkbox_class'] = 'checkbox'
+    factory.defaults['select.class'] = 'select'
+    factory.defaults['select.block_class'] = 'form-control'
+    factory.defaults['select.radio_wrapper_class'] = 'radio'
+    factory.defaults['select.checkbox_wrapper_class'] = 'checkbox'
 
     factory.defaults['submit.class'] = 'btn btn-default'
 
@@ -62,3 +63,30 @@ def configure_factory():
 
     # yafowil.widget.wysihtml5
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
+
+
+def register_macros():
+    macros = {
+        'form': {
+            'chain': 'form',
+            'props': {
+                'form.class': 'form-horizontal',
+            }
+        },
+        'field': {
+            'chain': 'field:label:div:help:error',
+            'props': {
+                'label.class_add': 'col-sm-2',
+                'div.class_add': 'col-sm-10',
+            }
+        },
+        'button': {
+            'chain': 'submit',
+            'props': {
+                'submit.class': 'btn',
+                'submit.class_add': 'btn-default',
+            }
+        },
+    }
+    for name, value in macros.items():
+        factory.register_macro(name, value['chain'], value['props'])
