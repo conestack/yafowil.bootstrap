@@ -36,7 +36,6 @@ def configure_factory():
     factory.defaults['number.class'] = 'number form-control'
 
     factory.defaults['label.class'] = 'control-label'
-    #factory.defaults['label.help'] = None
 
     factory.defaults['field.class'] = bs_field_class
 
