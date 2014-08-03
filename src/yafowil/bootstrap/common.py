@@ -52,6 +52,12 @@ def configure_factory():
     factory.defaults['array.table_class'] = \
         'table table-condensed'
 
+    # yafowil.widget.autocomplete
+    factory.defaults['autocomplete.class'] = 'autocomplete form-control'
+
+    # yafowil.widget.chosen
+    factory.defaults['chosen.class'] = 'chosen form-control'
+
     # yafowil.widget.dict
     factory.defaults['dict.table_class'] = \
         'dictwidget table table-condensed'
