@@ -61,6 +61,8 @@ def configure_factory():
     # yafowil.widget.dict
     factory.defaults['dict.table_class'] = \
         'dictwidget table table-condensed'
+    factory.defaults['dict.key_class'] = 'form-control'
+    factory.defaults['dict.value_class'] = 'form-control'
 
     # yafowil.widget.datetime
     factory.defaults['datetime.datepicker_class'] = 'datepicker form-control'
