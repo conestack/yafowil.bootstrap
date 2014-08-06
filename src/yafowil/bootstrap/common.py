@@ -63,8 +63,9 @@ def configure_factory():
         'dictwidget table table-condensed'
 
     # yafowil.widget.datetime
-    factory.defaults['datetime.datepicker_class'] = 'datepicker input-medium'
-    factory.defaults['datetime.timepicker_class'] = 'timepicker input-small'
+    factory.defaults['datetime.datepicker_class'] = 'datepicker form-control'
+    factory.defaults['datetime.timepicker_class'] = 'timepicker form-control'
+    factory.defaults['time.timepicker_class'] = 'timepicker form-control'
 
     # yafowil.widget.wysihtml5
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
