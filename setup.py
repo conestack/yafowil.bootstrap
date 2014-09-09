@@ -5,7 +5,7 @@ from setuptools import (
 )
 
 
-version = '1.2dev'
+version = '1.2pre1'
 shortdesc = 'Bootstrap Styles for YAFOWIL'
 longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()

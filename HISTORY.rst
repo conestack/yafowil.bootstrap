@@ -2,8 +2,8 @@
 History
 =======
 
-1.2dev
-------
+1.2 (unreleased)
+----------------
 
 - Use ``configure`` entry point for theme configuration.
   [rnix]
