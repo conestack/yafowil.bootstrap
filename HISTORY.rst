@@ -2,7 +2,7 @@
 History
 =======
 
-1.2 (unreleased)
+1.2 (2015-01-23)
 ----------------
 
 - Use ``configure`` entry point for theme configuration.
