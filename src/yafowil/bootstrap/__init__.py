@@ -1,9 +1,7 @@
-import os
 from yafowil.base import factory
-from yafowil.bootstrap.common import (
-    configure_factory,
-    register_macros,
-)
+from yafowil.bootstrap.common import configure_factory
+from yafowil.bootstrap.common import register_macros
+import os
 
 
 resourcedir = os.path.join(os.path.dirname(__file__), 'resources')
