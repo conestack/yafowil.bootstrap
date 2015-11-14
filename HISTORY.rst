@@ -2,6 +2,12 @@
 History
 =======
 
+1.2.1 (unreleased)
+------------------
+
+- Cleanup macro registration.
+  [rnix]
+
 1.2 (2015-01-23)
 ----------------
 

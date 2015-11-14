@@ -74,44 +74,26 @@ def configure_factory():
 
 
 def register_macros():
-    macros = dict()
-    macros['form'] = {
-        'chain': 'form',
-        'props': {
-            'form.class': 'form-horizontal',
-        }
-    }
-    macros['field'] = {
-        'chain': 'field:label:div:help:error',
-        'props': {
-            'label.class_add': 'col-sm-2',
-            'div.class_add': 'col-sm-10',
-        }
-    }
-    macros['button'] = {
-        'chain': 'submit',
-        'props': {
-            'submit.class': 'btn',
-            'submit.class_add': 'btn-default',
-        }
-    }
+    # common
+    factory.register_macro('form', 'form', {
+        'form.class': 'form-horizontal',
+    })
+    factory.register_macro('field', 'field:label:div:help:error', {
+        'label.class_add': 'col-sm-2',
+        'div.class_add': 'col-sm-10',
+    })
+    factory.register_macro('button', 'submit', {
+        'submit.class': 'btn',
+        'submit.class_add': 'btn-default',
+    })
 
     # yafowil.widget.array
-    macros['array'] = {
-        'chain': 'field:label:help:error:array',
-        'props': {
-            'array.label': ' ',
-            'field.class': 'form-group',
-            'label.class_add': 'col-sm-2',
-            'array.class_add': 'col-sm-10',
-            'help.class_add': 'col-sm-offset-2 col-sm-10',
-            'error.class_add': 'col-sm-offset-2 col-sm-10',
-        }
-    }
-    macros['arrayfield'] = {
-        'chain': 'field:label:help:error',
-        'props': {}
-    }
-
-    for name, value in macros.items():
-        factory.register_macro(name, value['chain'], value['props'])
+    factory.register_macro('array', 'field:label:help:error:array', {
+        'array.label': ' ',
+        'field.class': 'form-group',
+        'label.class_add': 'col-sm-2',
+        'array.class_add': 'col-sm-10',
+        'help.class_add': 'col-sm-offset-2 col-sm-10',
+        'error.class_add': 'col-sm-offset-2 col-sm-10',
+    })
+    factory.register_macro('arrayfield', 'field:label:help:error', {})
