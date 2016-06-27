@@ -2,8 +2,11 @@
 History
 =======
 
-1.2.1 (unreleased)
-------------------
+1.3 (unreleased)
+----------------
+
+- Use ``yafowil.utils.entry_point`` decorator.
+  [rnix]
 
 - Cleanup macro registration.
   [rnix]
