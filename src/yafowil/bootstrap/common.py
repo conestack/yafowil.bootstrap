@@ -90,7 +90,7 @@ def register_macros():
     # yafowil.widget.array
     factory.register_macro('array', 'field:label:help:error:array', {
         'array.label': ' ',
-        'field.class': 'form-group',
+        'field.class': bs_field_class,
         'label.class_add': 'col-sm-2',
         'array.class_add': 'col-sm-10',
         'help.class_add': 'col-sm-offset-2 col-sm-10',

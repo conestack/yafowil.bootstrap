@@ -2,10 +2,12 @@
 History
 =======
 
-1.4 (unreleased)
-----------------
+1.3.1 (unreleased)
+------------------
 
-- No changes yet.
+- Use ``bs_field_class`` callback for ``field.class`` property when registering
+  ``array`` macro.
+  [rnix]
 
 1.3 (2017-03-01)
 ----------------
