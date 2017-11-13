@@ -2,7 +2,7 @@
 History
 =======
 
-1.3.1 (unreleased)
+1.3.1 (2017-11-13)
 ------------------
 
 - Use ``bs_field_class`` callback for ``field.class`` property when registering
