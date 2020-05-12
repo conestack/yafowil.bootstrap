@@ -15,10 +15,10 @@ css = [{
     'group': 'bootstrap.dependencies',
     'resource': 'css/bootstrap.css',
     'order': 10,
-}, {
-    'group': 'bootstrap.dependencies',
-    'resource': 'css/bootstrap-theme.css',
-    'order': 11,
+# }, {
+#     'group': 'bootstrap.dependencies',
+#     'resource': 'css/bootstrap-theme.css',
+#     'order': 11,
 }]
 
 
