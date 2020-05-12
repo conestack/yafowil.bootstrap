@@ -25,7 +25,7 @@ def configure_factory():
     factory.defaults['select.radio_wrapper_class'] = 'radio'
     factory.defaults['select.checkbox_wrapper_class'] = 'checkbox'
 
-    factory.defaults['submit.class'] = 'btn btn-default'
+    factory.defaults['submit.class'] = 'btn btn-primary'
 
     factory.defaults['email.class'] = 'email form-control'
 
@@ -84,7 +84,7 @@ def register_macros():
     })
     factory.register_macro('button', 'button', {
         'button.class': 'btn',
-        'button.class_add': 'btn-default',
+        'button.class_add': 'btn-primary',
     })
 
     # yafowil.widget.array
