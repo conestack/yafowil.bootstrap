@@ -82,7 +82,7 @@ def register_macros():
         'label.class_add': 'col-sm-2',
         'div.class_add': 'col-sm-10',
     })
-    factory.register_macro('button', 'submit', {
+    factory.register_macro('button', 'button', {
         'submit.class': 'btn',
         'submit.class_add': 'btn-default',
     })
