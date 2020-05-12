@@ -83,8 +83,8 @@ def register_macros():
         'div.class_add': 'col-sm-10',
     })
     factory.register_macro('button', 'button', {
-        'submit.class': 'btn',
-        'submit.class_add': 'btn-default',
+        'button.class': 'btn',
+        'button.class_add': 'btn-default',
     })
 
     # yafowil.widget.array
