@@ -1,8 +1,8 @@
+from . import bs3
+from . import bs4
 from yafowil.base import factory
 from yafowil.utils import entry_point
 
-import bs3
-import bs4
 import os
 
 
