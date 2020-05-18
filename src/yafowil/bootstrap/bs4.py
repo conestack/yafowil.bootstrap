@@ -1,24 +1,27 @@
 from yafowil.base import factory
-
-
-def bs_field_class(widget, data):
-    if data.errors:
-        return "form-group has-error"
-    return "form-group"
+from yafowil.utils import attr_value
 
 
 def configure_factory():
     # set theme
     factory.theme = "bootstrap4"
 
+    # wrapper div for one input
+    factory.defaults["field.class"] = "form-group"
+
+    # label required marker (plone)
+    factory.defaults["label.required_class"] = "required"
+
     # common defaults
-    factory.defaults["text.class"] = "text form-control"
-
-    factory.defaults["textarea.class"] = "textarea form-control"
-
-    factory.defaults["lines.class"] = "lines form-control"
-
-    factory.defaults["password.class"] = "password form-control"
+    # form-control:
+    # errors: https://getbootstrap.com/docs/4.4/components/forms/#how-it-works
+    bs4_input_blueprints = [
+        "text", "textarea", "lines", "password", "select", "email", "url", "search"
+    ]
+    for blueprint_name in bs4_input_blueprints:
+        factory.defaults["{0}.class".format(blueprint_name)] = "form-control"
+        factory.defaults["{0}.error_class".format(blueprint_name)] = "is-invalid"
+        factory.defaults["{0}.valid_class".format(blueprint_name)] = "is-valid"
 
     factory.defaults["select.class"] = "select"
     factory.defaults["select.block_class"] = "form-control"
@@ -28,22 +31,11 @@ def configure_factory():
     factory.defaults["submit.class"] = "btn btn-primary"
     factory.defaults["button.class"] = "btn btn-primary"
 
-    factory.defaults["email.class"] = "email form-control"
-
-    factory.defaults["url.class"] = "url form-control"
-
-    factory.defaults["search.class"] = "search form-control"
-
-    factory.defaults["number.class"] = "number form-control"
-
-    factory.defaults["label.class"] = "col-form-label"
-
-    factory.defaults["field.class"] = bs_field_class
-
     factory.defaults["error.position"] = "after"
-    factory.defaults["error.tag"] = "span"
-    factory.defaults["error.class"] = "help-block"
-    factory.defaults["error.message_class"] = "text-danger"
+    factory.defaults["error.tag"] = "div"
+    factory.defaults["error.class"] = "invalid-feedback"
+    factory.defaults["error.message_class"] = None
+    factory.defaults['error.message_tag'] = None
 
     factory.defaults["help.position"] = "after"
     factory.defaults["help.tag"] = "small"
