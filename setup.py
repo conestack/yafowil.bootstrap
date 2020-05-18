@@ -6,7 +6,7 @@ import os
 version = '2.0.0.dev0'
 shortdesc = 'Bootstrap Styles for YAFOWIL'
 longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()
+longdesc += open(os.path.join(os.path.dirname(__file__), 'CHANGES.rst')).read()
 longdesc += open(os.path.join(os.path.dirname(__file__), 'LICENSE.rst')).read()
 tests_require = ['yafowil[test]']
 
@@ -45,5 +45,4 @@ setup(
     entry_points="""
     [yafowil.plugin]
     register = yafowil.bootstrap:register
-    configure = yafowil.bootstrap:configure
     """)

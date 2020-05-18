@@ -9,7 +9,7 @@ def bs_field_class(widget, data):
 
 def configure_factory():
     # set theme
-    factory.theme = "bootstrap"
+    factory.theme = "bootstrap4"
 
     # common defaults
     factory.defaults["text.class"] = "text form-control"
@@ -76,17 +76,10 @@ def register_macros():
     # common
     factory.register_macro("form", "form", {})
 
-    factory.register_macro(
-        "field", "field:label:help:error", {}
-    )
+    factory.register_macro("field", "field:label:help:error", {})
 
     factory.register_macro(
-        "button",
-        "button",
-        {
-            "button.class": "btn",
-            "button.class_add": "btn-primary",
-        },
+        "button", "button", {"button.class": "btn", "button.class_add": "btn-primary",},
     )
 
     # yafowil.widget.array
