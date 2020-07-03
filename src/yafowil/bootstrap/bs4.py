@@ -23,10 +23,13 @@ def configure_factory():
         factory.defaults["{0}.error_class".format(blueprint_name)] = "is-invalid"
         factory.defaults["{0}.valid_class".format(blueprint_name)] = "is-valid"
 
-    factory.defaults["select.class"] = "select"
-    factory.defaults["select.block_class"] = "form-control"
-    factory.defaults["select.radio_wrapper_class"] = "radio"
-    factory.defaults["select.checkbox_wrapper_class"] = "checkbox"
+    # factory.defaults["select.block_class"] = "form-control"
+    factory.defaults["select.class"] = "form-check-input"
+    factory.defaults["select.radio_label_class"] = "form-check-label"
+    factory.defaults["select.checkbox_label_class"] = "form-check-label"
+    factory.defaults["select.radio_wrapper_class"] = "form-check"
+    factory.defaults["select.checkbox_wrapper_class"] = "form-check"
+    factory.defaults["select.listing_label_position"] = "after"
 
     factory.defaults["submit.class"] = "btn btn-primary"
     factory.defaults["button.class"] = "btn btn-primary"
