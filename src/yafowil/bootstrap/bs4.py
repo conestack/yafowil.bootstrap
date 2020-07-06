@@ -16,7 +16,15 @@ def configure_factory():
     # form-control:
     # errors: https://getbootstrap.com/docs/4.4/components/forms/#how-it-works
     bs4_input_blueprints = [
-        "text", "textarea", "lines", "password", "email", "url", "search"
+        "text",
+        "textarea",
+        "lines",
+        "password",
+        "email",
+        "url",
+        "search",
+        "number",
+        "file",
     ]
     for blueprint_name in bs4_input_blueprints:
         factory.defaults["{0}.class".format(blueprint_name)] = "form-control"
@@ -36,6 +44,9 @@ def configure_factory():
     factory.defaults["help.position"] = "after"
     factory.defaults["help.tag"] = "small"
     factory.defaults["help.class"] = "form-text text-muted"
+
+    # file
+    factory.defaults["file.class"] = "form-control-file"
 
     # select
     factory.defaults["select.block_class"] = "form-control"
