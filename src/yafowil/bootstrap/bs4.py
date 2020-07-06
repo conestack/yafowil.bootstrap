@@ -47,6 +47,9 @@ def configure_factory():
     factory.defaults["select.checkbox_wrapper_class"] = "form-check"
     factory.defaults["select.listing_label_position"] = "after"
 
+    # single checkbox
+    factory.defaults["checkbox.class"] = "form-check-input"
+
     # yafowil.widget.array
     factory.defaults["array.table_class"] = "table table-condensed"
 
