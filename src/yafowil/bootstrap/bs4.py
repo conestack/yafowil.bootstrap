@@ -16,20 +16,13 @@ def configure_factory():
     # form-control:
     # errors: https://getbootstrap.com/docs/4.4/components/forms/#how-it-works
     bs4_input_blueprints = [
-        "text", "textarea", "lines", "password", "select", "email", "url", "search"
+        "text", "textarea", "lines", "password", "email", "url", "search"
     ]
     for blueprint_name in bs4_input_blueprints:
         factory.defaults["{0}.class".format(blueprint_name)] = "form-control"
         factory.defaults["{0}.error_class".format(blueprint_name)] = "is-invalid"
         factory.defaults["{0}.valid_class".format(blueprint_name)] = "is-valid"
 
-    # factory.defaults["select.block_class"] = "form-control"
-    factory.defaults["select.class"] = "form-check-input"
-    factory.defaults["select.radio_label_class"] = "form-check-label"
-    factory.defaults["select.checkbox_label_class"] = "form-check-label"
-    factory.defaults["select.radio_wrapper_class"] = "form-check"
-    factory.defaults["select.checkbox_wrapper_class"] = "form-check"
-    factory.defaults["select.listing_label_position"] = "after"
 
     factory.defaults["submit.class"] = "btn btn-primary"
     factory.defaults["button.class"] = "btn btn-primary"
@@ -43,6 +36,16 @@ def configure_factory():
     factory.defaults["help.position"] = "after"
     factory.defaults["help.tag"] = "small"
     factory.defaults["help.class"] = "form-text text-muted"
+
+    # select
+    factory.defaults["select.block_class"] = "form-control"
+    factory.defaults["select.radio_input_class"] = "form-check-input"
+    factory.defaults["select.radio_label_class"] = "form-check-label"
+    factory.defaults["select.radio_wrapper_class"] = "form-check"
+    factory.defaults["select.checkbox_input_class"] = "form-check-input"
+    factory.defaults["select.checkbox_label_class"] = "form-check-label"
+    factory.defaults["select.checkbox_wrapper_class"] = "form-check"
+    factory.defaults["select.listing_label_position"] = "after"
 
     # yafowil.widget.array
     factory.defaults["array.table_class"] = "table table-condensed"
