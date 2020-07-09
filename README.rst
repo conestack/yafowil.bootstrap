@@ -37,10 +37,7 @@ We'd be happy to see many forks and pull-requests to make YAFOWIL even better.
 Contributors
 ============
 
-- Robert Niederrreiter <rnix [at] squarewave [dot] at>
-
-- Jens Klein <jens [at] bluedynamics [dot] com>
-
-- Johannes Raggam <johannes [at] raggam [dot] co [dot] at>
-
-- Peter Holzer <peter.holzer [at] agitator [dot] com>
+- Robert Niederrreiter
+- Jens Klein
+- Johannes Raggam
+- Peter Holzer
