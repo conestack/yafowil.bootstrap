@@ -1,5 +1,4 @@
-
-History
+Changes
 =======
 
 1.3.2 (unreleased)
@@ -7,12 +6,14 @@ History
 
 - No changes yet.
 
+
 1.3.1 (2017-11-13)
 ------------------
 
 - Use ``bs_field_class`` callback for ``field.class`` property when registering
   ``array`` macro.
   [rnix]
+
 
 1.3 (2017-03-01)
 ----------------
@@ -22,6 +23,7 @@ History
 
 - Cleanup macro registration.
   [rnix]
+
 
 1.2 (2015-01-23)
 ----------------
@@ -39,11 +41,13 @@ History
 - Update to bootstrap 3.2.
   [rnix]
 
+
 1.1
 ---
 
 - Register the bootstrap.js javascript too.
   [thet]
+
 
 1.0
 ---

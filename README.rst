@@ -1,3 +1,17 @@
+.. image:: https://img.shields.io/pypi/v/yafowil.bootstrap.svg
+    :target: https://pypi.python.org/pypi/yafowil.bootstrap
+    :alt: Latest PyPI version
+
+.. image:: https://img.shields.io/pypi/dm/yafowil.bootstrap.svg
+    :target: https://pypi.python.org/pypi/yafowil.bootstrap
+    :alt: Number of PyPI downloads
+
+.. image:: https://travis-ci.org/bluedynamics/yafowil.bootstrap.svg?branch=master
+    :target: https://travis-ci.org/bluedynamics/yafowil.bootstrap
+
+.. image:: https://coveralls.io/repos/github/bluedynamics/yafowil.bootstrap/badge.svg?branch=master
+    :target: https://coveralls.io/github/bluedynamics/yafowil.bootstrap?branch=master
+
 This is the **bootstrap styles integration** for for `YAFOWIL 
 <http://pypi.python.org/pypi/yafowil>`_ - Yet Another Form Widget Library.
 

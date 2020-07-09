@@ -3,11 +3,18 @@ from setuptools import setup
 import os
 
 
+def read_file(name):
+    with open(os.path.join(os.path.dirname(__file__), name)) as f:
+        return f.read()
+
+
 version = '1.3.2.dev0'
 shortdesc = 'Bootstrap Styles for YAFOWIL'
-longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-longdesc += open(os.path.join(os.path.dirname(__file__), 'HISTORY.rst')).read()
-longdesc += open(os.path.join(os.path.dirname(__file__), 'LICENSE.rst')).read()
+longdesc = '\n\n'.join([read_file(name) for name in [
+    'README.rst',
+    'CHANGES.rst',
+    'LICENSE.rst'
+]])
 tests_require = ['yafowil[test]']
 
 
@@ -29,7 +36,7 @@ setup(
     url=u'https://github.com/bluedynamics/yafowil.bootstrap',
     license='Simplified BSD',
     packages=find_packages('src'),
-    package_dir = {'': 'src'},
+    package_dir={'': 'src'},
     namespace_packages=['yafowil'],
     include_package_data=True,
     zip_safe=False,
@@ -38,7 +45,7 @@ setup(
         'yafowil>1.99',
     ],
     tests_require=tests_require,
-    extras_require = dict(
+    extras_require=dict(
         test=tests_require,
     ),
     test_suite="yafowil.bootstrap.tests.test_suite",
@@ -46,4 +53,5 @@ setup(
     [yafowil.plugin]
     register = yafowil.bootstrap:register
     configure = yafowil.bootstrap:configure
-    """)
+    """
+)
