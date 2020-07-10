@@ -49,6 +49,8 @@ def configure_factory():
     factory.defaults["file.class"] = "form-control-file"
 
     # select
+    factory.defaults["select.error_class"] = "is-invalid"
+    factory.defaults["select.valid_class"] = "is-valid"
     factory.defaults["select.block_class"] = "form-control"
     factory.defaults["select.radio_input_class"] = "form-check-input"
     factory.defaults["select.radio_label_class"] = "form-check-label"
@@ -59,6 +61,8 @@ def configure_factory():
     factory.defaults["select.listing_label_position"] = "after"
 
     # single checkbox
+    factory.defaults["checkbox.error_class"] = "is-invalid"
+    factory.defaults["checkbox.valid_class"] = "is-valid"
     factory.defaults["checkbox.class"] = "form-check-input"
 
     # yafowil.widget.array
