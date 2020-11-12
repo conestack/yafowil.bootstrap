@@ -7,7 +7,10 @@ def configure_factory():
     factory.theme = "bootstrap5"
 
     # wrapper div for one input
-    factory.defaults["field.class"] = "form-group"
+    factory.defaults["field.class"] = "field mb-3"
+
+    # label marker
+    factory.defaults["label.class"] = "form-label"
 
     # label required marker (plone)
     factory.defaults["label.required_class"] = "required"
@@ -42,11 +45,11 @@ def configure_factory():
     factory.defaults['error.message_tag'] = None
 
     factory.defaults["help.position"] = "after"
-    factory.defaults["help.tag"] = "small"
-    factory.defaults["help.class"] = "form-text text-muted"
+    factory.defaults["help.tag"] = "div"
+    factory.defaults["help.class"] = "form-text"
 
     # file
-    factory.defaults["file.class"] = "form-control-file"
+    factory.defaults["file.class"] = "form-control"
 
     # select
     factory.defaults["select.error_class"] = "is-invalid"
