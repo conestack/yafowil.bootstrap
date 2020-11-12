@@ -16,6 +16,9 @@ History
   Latter is provided a fallback as `bootstrap` too (will be removed in future versions).
   [jensens, agitator]
 
+- Add Bootstrap 5 (v5.0.0-alpha3)
+  [agitator]
+
 1.3.1 (2017-11-13)
 ------------------
 
