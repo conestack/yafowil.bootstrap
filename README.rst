@@ -16,6 +16,18 @@ This is the **bootstrap styles integration** for for `YAFOWIL
 <http://pypi.python.org/pypi/yafowil>`_ - Yet Another Form Widget Library.
 
 
+This package provides themes for Bootstrap 3, 4 and 5.
+
+In order to select one of the themes, ``configure_factory`` must be called with
+the desired theme name:
+
+.. code-block:: python
+
+    from yafowil.bootstrap import configure_factory
+
+    configure_factory('bootstrap4')
+
+
 Detailed Documentation
 ======================
 
