@@ -4,7 +4,8 @@ Changes
 1.3.2 (unreleased)
 ------------------
 
-- No changes yet.
+- Remove empty doctest.
+  [rnix]
 
 
 1.3.1 (2017-11-13)
