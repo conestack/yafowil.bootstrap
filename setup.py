@@ -53,6 +53,5 @@ setup(
     entry_points="""
     [yafowil.plugin]
     register = yafowil.bootstrap:register
-    configure = yafowil.bootstrap:configure
     """
 )
