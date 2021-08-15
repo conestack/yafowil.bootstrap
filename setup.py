@@ -43,13 +43,6 @@ setup(
         'setuptools',
         'yafowil>2.2.99',
     ],
-    tests_require=tests_require,
-    extras_require=dict(
-        test=[
-            'yafowil[test]'
-        ]
-    ),
-    test_suite="yafowil.bootstrap.tests.test_suite",
     entry_points="""
     [yafowil.plugin]
     register = yafowil.bootstrap:register
