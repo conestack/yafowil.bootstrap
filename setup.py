@@ -43,7 +43,6 @@ setup(
         'setuptools',
         'yafowil>1.99',
     ],
-    tests_require=tests_require,
     extras_require=dict(
         test=[
             'yafowil[test]'
