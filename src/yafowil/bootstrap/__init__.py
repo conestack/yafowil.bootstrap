@@ -105,9 +105,5 @@ def configure_factory(theme):
         baseline = bs5
     else:
         raise ValueError('Available themes: bootstrap3, bootstrap4, bootstrap5')
-    if os.environ.get('TESTRUN_MARKER'):
-        # skip for testing
-        # only configure factory if not suppressed explicit
-        return
     baseline.configure_factory()
     baseline.register_macros()
