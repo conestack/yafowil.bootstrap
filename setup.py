@@ -41,7 +41,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'yafowil>2.2.99',
+        'webresource',
+        'yafowil>2.2.99'
     ],
     entry_points="""
     [yafowil.plugin]
