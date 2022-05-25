@@ -21,16 +21,22 @@ bs3_resources_dir = os.path.join(resources_dir, 'bs3')
 bs3_scripts_dir = os.path.join(bs3_resources_dir, 'js')
 bs3_styles_dir = os.path.join(bs3_resources_dir, 'css')
 
-bs3_scripts = wr.ResourceGroup(name='yafowil-bootstrap-scripts')
+bs3_scripts = wr.ResourceGroup(
+    name='yafowil-bootstrap-scripts',
+    path='yafowil.bootstrap'
+)
 bs3_scripts.add(wr.ScriptResource(
     name='bootstrap-js',
-    depends='jquery',
+    depends='jquery-js',
     directory=bs3_scripts_dir,
     resource='bootstrap.js',
     compressed='bootstrap.min.js'
 ))
 
-bs3_styles = wr.ResourceGroup(name='yafowil-bootstrap-styles')
+bs3_styles = wr.ResourceGroup(
+    name='yafowil-bootstrap-styles',
+    path='yafowil.bootstrap'
+)
 bs3_styles.add(wr.StyleResource(
     name='bootstrap-css',
     directory=bs3_styles_dir,
@@ -41,8 +47,8 @@ bs3_styles.add(wr.StyleResource(
     name='bootstrap-theme-css',
     depends='bootstrap-css',
     directory=bs3_styles_dir,
-    resource='bootstrap.css',
-    compressed='bootstrap.min.css'
+    resource='bootstrap-theme.css',
+    compressed='bootstrap-theme.min.css'
 ))
 
 # B/C resources ##############################################################
@@ -73,7 +79,10 @@ bs4_resources_dir = os.path.join(resources_dir, 'bs4')
 bs4_scripts_dir = os.path.join(bs4_resources_dir, 'js')
 bs4_styles_dir = os.path.join(bs4_resources_dir, 'css')
 
-bs4_scripts = wr.ResourceGroup(name='yafowil-bootstrap-scripts')
+bs4_scripts = wr.ResourceGroup(
+    name='yafowil-bootstrap-scripts',
+    path='yafowil.bootstrap'
+)
 bs4_scripts.add(wr.ScriptResource(
     name='bootstrap-js',
     depends='jquery-js',
@@ -82,7 +91,10 @@ bs4_scripts.add(wr.ScriptResource(
     compressed='bootstrap.min.js'
 ))
 
-bs4_styles = wr.ResourceGroup(name='yafowil-bootstrap-styles')
+bs4_styles = wr.ResourceGroup(
+    name='yafowil-bootstrap-styles',
+    path='yafowil.bootstrap'
+)
 bs4_styles.add(wr.StyleResource(
     name='bootstrap-css',
     directory=bs4_styles_dir,
@@ -114,7 +126,10 @@ bs5_resources_dir = os.path.join(resources_dir, 'bs5')
 bs5_scripts_dir = os.path.join(bs5_resources_dir, 'js')
 bs5_styles_dir = os.path.join(bs5_resources_dir, 'css')
 
-bs5_scripts = wr.ResourceGroup(name='yafowil-bootstrap-scripts')
+bs5_scripts = wr.ResourceGroup(
+    name='yafowil-bootstrap-scripts',
+    path='yafowil.bootstrap'
+)
 bs5_scripts.add(wr.ScriptResource(
     name='bootstrap-js',
     directory=bs5_scripts_dir,
@@ -122,7 +137,10 @@ bs5_scripts.add(wr.ScriptResource(
     compressed='bootstrap.min.js'
 ))
 
-bs5_styles = wr.ResourceGroup(name='yafowil-bootstrap-styles')
+bs5_styles = wr.ResourceGroup(
+    name='yafowil-bootstrap-styles',
+    path='yafowil.bootstrap'
+)
 bs5_styles.add(wr.StyleResource(
     name='bootstrap-css',
     directory=bs5_styles_dir,
