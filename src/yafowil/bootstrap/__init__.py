@@ -21,32 +21,31 @@ bs3_resources_dir = os.path.join(resources_dir, 'bs3')
 bs3_scripts_dir = os.path.join(bs3_resources_dir, 'js')
 bs3_styles_dir = os.path.join(bs3_resources_dir, 'css')
 
-bs3_scripts = wr.ResourceGroup(
-    name='yafowil-bootstrap-scripts',
-    path='yafowil.bootstrap'
+bs3_resources = wr.ResourceGroup(
+    name='yafowil-bootstrap3-resources',
+    directory=bs3_resources_dir,
+    path='bootstrap'
 )
-bs3_scripts.add(wr.ScriptResource(
+bs3_resources.add(wr.ScriptResource(
     name='bootstrap-js',
     depends='jquery-js',
     directory=bs3_scripts_dir,
+    path='bootstrap/js',
     resource='bootstrap.js',
     compressed='bootstrap.min.js'
 ))
-
-bs3_styles = wr.ResourceGroup(
-    name='yafowil-bootstrap-styles',
-    path='yafowil.bootstrap'
-)
-bs3_styles.add(wr.StyleResource(
+bs3_resources.add(wr.StyleResource(
     name='bootstrap-css',
     directory=bs3_styles_dir,
+    path='bootstrap/css',
     resource='bootstrap.css',
     compressed='bootstrap.min.css'
 ))
-bs3_styles.add(wr.StyleResource(
+bs3_resources.add(wr.StyleResource(
     name='bootstrap-theme-css',
     depends='bootstrap-css',
     directory=bs3_styles_dir,
+    path='bootstrap/css',
     resource='bootstrap-theme.css',
     compressed='bootstrap-theme.min.css'
 ))
@@ -79,25 +78,23 @@ bs4_resources_dir = os.path.join(resources_dir, 'bs4')
 bs4_scripts_dir = os.path.join(bs4_resources_dir, 'js')
 bs4_styles_dir = os.path.join(bs4_resources_dir, 'css')
 
-bs4_scripts = wr.ResourceGroup(
-    name='yafowil-bootstrap-scripts',
-    path='yafowil.bootstrap'
+bs4_resources = wr.ResourceGroup(
+    name='yafowil-bootstrap4-resources',
+    directory=bs4_resources_dir,
+    path='bootstrap',
 )
-bs4_scripts.add(wr.ScriptResource(
+bs4_resources.add(wr.ScriptResource(
     name='bootstrap-js',
     depends='jquery-js',
     directory=bs4_scripts_dir,
+    path='bootstrap/js',
     resource='bootstrap.js',
     compressed='bootstrap.min.js'
 ))
-
-bs4_styles = wr.ResourceGroup(
-    name='yafowil-bootstrap-styles',
-    path='yafowil.bootstrap'
-)
-bs4_styles.add(wr.StyleResource(
+bs4_resources.add(wr.StyleResource(
     name='bootstrap-css',
     directory=bs4_styles_dir,
+    path='bootstrap/css',
     resource='bootstrap.css',
     compressed='bootstrap.min.css'
 ))
@@ -126,24 +123,22 @@ bs5_resources_dir = os.path.join(resources_dir, 'bs5')
 bs5_scripts_dir = os.path.join(bs5_resources_dir, 'js')
 bs5_styles_dir = os.path.join(bs5_resources_dir, 'css')
 
-bs5_scripts = wr.ResourceGroup(
-    name='yafowil-bootstrap-scripts',
-    path='yafowil.bootstrap'
+bs5_resources = wr.ResourceGroup(
+    name='yafowil-bootstrap5-resources',
+    directory=bs5_resources_dir,
+    path='bootstrap'
 )
-bs5_scripts.add(wr.ScriptResource(
+bs5_resources.add(wr.ScriptResource(
     name='bootstrap-js',
     directory=bs5_scripts_dir,
+    path='bootstrap/js',
     resource='bootstrap.js',
     compressed='bootstrap.min.js'
 ))
-
-bs5_styles = wr.ResourceGroup(
-    name='yafowil-bootstrap-styles',
-    path='yafowil.bootstrap'
-)
-bs5_styles.add(wr.StyleResource(
+bs5_resources.add(wr.StyleResource(
     name='bootstrap-css',
     directory=bs5_styles_dir,
+    path='bootstrap/css',
     resource='bootstrap.css',
     compressed='bootstrap.min.css'
 ))
@@ -168,38 +163,42 @@ css_bs5 = [{
 
 @entry_point(order=20)
 def register():
+    widget_name = 'yafowil.bootstrap'
+
     # Bootstrap 3
-    # B/C bootstrap is legacy name for bootstrap3
+    # bootstrap is legacy name for bootstrap3
     factory.register_theme(
-        ['bootstrap', 'bootstrap3'], 'yafowil.bootstrap', bs3_resources_dir,
-        js=js_bs3, css=css_bs3
-    )
-    factory.register_scripts(
         ['bootstrap', 'bootstrap3'],
-        'yafowil.bootstrap',
-        bs3_scripts
+        widget_name,
+        bs3_resources_dir,
+        js=js_bs3,
+        css=css_bs3
     )
-    factory.register_styles(
+    factory.register_resources(
         ['bootstrap', 'bootstrap3'],
-        'yafowil.bootstrap',
-        bs3_styles
+        widget_name,
+        bs3_resources
     )
 
     # Bootstrap 4
     factory.register_theme(
-        'bootstrap4', 'yafowil.bootstrap', bs4_resources_dir,
-        js=js_bs4, css=css_bs4
+        'bootstrap4',
+        widget_name,
+        bs4_resources_dir,
+        js=js_bs4,
+        css=css_bs4
     )
-    factory.register_scripts('bootstrap4', 'yafowil.bootstrap', bs4_scripts)
-    factory.register_styles('bootstrap4', 'yafowil.bootstrap', bs4_styles)
+    factory.register_resources('bootstrap4', widget_name, bs4_resources)
 
     # Bootstrap 5
     factory.register_theme(
-        'bootstrap5', 'yafowil.bootstrap', bs5_resources_dir,
-        js=js_bs5, css=css_bs5
+        'bootstrap5',
+        widget_name,
+        bs5_resources_dir,
+        js=js_bs5,
+        css=css_bs5
     )
-    factory.register_scripts('bootstrap5', 'yafowil.bootstrap', bs5_scripts)
-    factory.register_styles('bootstrap5', 'yafowil.bootstrap', bs5_styles)
+    factory.register_resources('bootstrap5', widget_name, bs5_resources)
 
 
 ##############################################################################
