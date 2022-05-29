@@ -9,7 +9,7 @@ def bs_field_class(widget, data):
 
 def configure_factory():
     # set theme
-    factory.theme = 'bootstrap'
+    factory.theme = 'bootstrap3'
 
     # common defaults
     factory.defaults['text.class'] = 'text form-control'
