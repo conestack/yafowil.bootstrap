@@ -22,7 +22,7 @@ bs3_scripts_dir = os.path.join(bs3_resources_dir, 'js')
 bs3_styles_dir = os.path.join(bs3_resources_dir, 'css')
 
 bs3_resources = wr.ResourceGroup(
-    name='yafowil-bootstrap3-resources',
+    name='yafowil.bootstrap',
     directory=bs3_resources_dir,
     path='bootstrap'
 )
@@ -79,7 +79,7 @@ bs4_scripts_dir = os.path.join(bs4_resources_dir, 'js')
 bs4_styles_dir = os.path.join(bs4_resources_dir, 'css')
 
 bs4_resources = wr.ResourceGroup(
-    name='yafowil-bootstrap4-resources',
+    name='yafowil.bootstrap',
     directory=bs4_resources_dir,
     path='bootstrap',
 )
@@ -124,7 +124,7 @@ bs5_scripts_dir = os.path.join(bs5_resources_dir, 'js')
 bs5_styles_dir = os.path.join(bs5_resources_dir, 'css')
 
 bs5_resources = wr.ResourceGroup(
-    name='yafowil-bootstrap5-resources',
+    name='yafowil.bootstrap',
     directory=bs5_resources_dir,
     path='bootstrap'
 )

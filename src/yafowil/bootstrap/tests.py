@@ -30,6 +30,7 @@ class TestBootstrap(NodeTestCase):
 
         resources = factory.get_resources('yafowil.bootstrap')
         self.assertTrue(resources.directory.endswith(np('/resources/bs3')))
+        self.assertEqual(resources.name, 'yafowil.bootstrap')
         self.assertEqual(resources.path, 'bootstrap')
 
         scripts = resources.scripts
@@ -68,6 +69,7 @@ class TestBootstrap(NodeTestCase):
     def test_bs4_resources(self):
         factory.theme = 'bootstrap4'
         resources = factory.get_resources('yafowil.bootstrap')
+        self.assertEqual(resources.name, 'yafowil.bootstrap')
         self.assertTrue(resources.directory.endswith(np('/resources/bs4')))
         self.assertEqual(resources.path, 'bootstrap')
 
@@ -100,6 +102,7 @@ class TestBootstrap(NodeTestCase):
     def test_bs5_resources(self):
         factory.theme = 'bootstrap5'
         resources = factory.get_resources('yafowil.bootstrap')
+        self.assertEqual(resources.name, 'yafowil.bootstrap')
         self.assertTrue(resources.directory.endswith(np('/resources/bs5')))
         self.assertEqual(resources.path, 'bootstrap')
 
