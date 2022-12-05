@@ -4,6 +4,9 @@ Changes
 1.3.2 (unreleased)
 ------------------
 
+- Release wheel.
+  [rnix]
+
 - Remove empty doctest.
   [rnix]
 
