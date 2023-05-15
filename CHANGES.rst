@@ -1,8 +1,8 @@
 Changes
 =======
 
-2.0.0 (unreleased)
-------------------
+2.0.0a1 (unreleased)
+--------------------
 
 - Factory configuration and macro registration is no longer done automatically
   due to the multi-theme feature. It must be configured in your code using
