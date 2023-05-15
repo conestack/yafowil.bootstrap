@@ -1,7 +1,7 @@
 Changes
 =======
 
-2.0.0a1 (unreleased)
+2.0.0a1 (2023-05-15)
 --------------------
 
 - Factory configuration and macro registration is no longer done automatically
