@@ -44,6 +44,8 @@ setup(
         'webresource',
         'yafowil>2.2.99'
     ],
+    tests_require=['coverage'],
+    extras_require=dict(test=['coverage']),
     entry_points="""
     [yafowil.plugin]
     register = yafowil.bootstrap:register
