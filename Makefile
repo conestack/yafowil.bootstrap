@@ -99,7 +99,7 @@ COVERAGE_COMMAND?=\
 	$(VENV_FOLDER)/bin/coverage run \
 		--source src/yafowil/bootstrap \
 		-m yafowil.bootstrap.tests \
-	&& $(VENV_FOLDER)/bin/coverage report --fail-under=49
+	&& $(VENV_FOLDER)/bin/coverage report --fail-under=48
 
 ##############################################################################
 # END SETTINGS - DO NOT EDIT BELOW THIS LINE

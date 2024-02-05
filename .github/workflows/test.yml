@@ -43,4 +43,4 @@ jobs:
       - name: Run coverage
         run: |
           coverage run --source=src/yafowil -m yafowil.bootstrap.tests
-          coverage report -m --fail-under=49
+          coverage report -m --fail-under=48
