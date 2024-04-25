@@ -34,7 +34,6 @@ def configure_factory():
         factory.defaults['{0}.error_class'.format(blueprint_name)] = 'is-invalid'
         factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
 
-
     factory.defaults['submit.class'] = 'btn btn-primary'
     factory.defaults['button.class'] = 'btn btn-primary'
 
@@ -54,7 +53,7 @@ def configure_factory():
     # select
     factory.defaults['select.error_class'] = 'is-invalid'
     factory.defaults['select.valid_class'] = 'is-valid'
-    factory.defaults['select.block_class'] = 'form-control'
+    factory.defaults['select.block_class'] = 'form-select'
     factory.defaults['select.radio_input_class'] = 'form-check-input'
     factory.defaults['select.radio_label_class'] = 'form-check-label'
     factory.defaults['select.radio_wrapper_class'] = 'form-check'
