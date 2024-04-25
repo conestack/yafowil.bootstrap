@@ -24,6 +24,16 @@ Changes
   [jensens, agitator]
 
 
+1.3.2 (2022-12-05)
+------------------
+
+- Release wheel.
+  [rnix]
+
+- Remove empty doctest.
+  [rnix]
+
+
 1.3.1 (2017-11-13)
 ------------------
 
