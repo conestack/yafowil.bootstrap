@@ -1,7 +1,7 @@
 Changes
 =======
 
-2.0.0a2 (unreleased)
+2.0.0a2 (2024-04-30)
 --------------------
 
 - Update BS4 resources to latest 4.6.2
