@@ -4,7 +4,14 @@ Changes
 2.0.0a2 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Update BS4 resources to latest 4.6.2
+  [petschki]
+
+- Update BS5 resources to latest 5.3.3
+  [petschki]
+
+- Fix CSS class for <select>.
+  [petschki]
 
 
 2.0.0a1 (2023-05-15)
