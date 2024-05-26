@@ -1,5 +1,4 @@
 from yafowil.base import factory
-from yafowil.utils import attr_value
 
 
 def configure_factory():
