@@ -33,8 +33,8 @@ def configure_factory():
         factory.defaults['{0}.error_class'.format(blueprint_name)] = 'is-invalid'
         factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
 
-    factory.defaults['submit.class'] = 'btn btn-primary'
-    factory.defaults['button.class'] = 'btn btn-primary'
+    factory.defaults['submit.class'] = 'btn btn-primary text-light'
+    factory.defaults['button.class'] = 'btn btn-primary text-light'
 
     factory.defaults['error.position'] = 'after'
     factory.defaults['error.tag'] = 'div'
@@ -98,7 +98,7 @@ def register_macros():
         'button',
         {
             'button.class': 'btn',
-            'button.class_add': 'btn-primary'
+            'button.class_add': 'btn-primary text-light'
         }
     )
 
