@@ -69,7 +69,7 @@ def configure_factory():
     factory.defaults['checkbox.class'] = 'form-check-input'
 
     # yafowil.widget.array
-    factory.defaults['array.table_class'] = 'table table-condensed'
+    factory.defaults['array.table_class'] = 'table table-sm'
 
     # yafowil.widget.autocomplete
     factory.defaults['autocomplete.class'] = 'autocomplete form-control'
@@ -83,7 +83,7 @@ def configure_factory():
     factory.defaults['time.timepicker_class'] = 'timepicker form-control'
 
     # yafowil.widget.dict
-    factory.defaults['dict.table_class'] = 'dictwidget table table-condensed'
+    factory.defaults['dict.table_class'] = 'dictwidget table table-sm'
     factory.defaults['dict.key_class'] = 'form-control'
     factory.defaults['dict.value_class'] = 'form-control'
 
@@ -110,10 +110,10 @@ def register_macros():
         'field:label:help:error:array',
         {
             'array.label': ' ',
-            'label.class_add': 'col-sm-2',
-            'array.class_add': 'col-sm-10',
-            'help.class_add': 'col-sm-offset-2 col-sm-10',
-            'error.class_add': 'col-sm-offset-2 col-sm-10'
+            'label.class_add': '',
+            'array.class_add': 'd-flex justify-content-end',
+            'help.class_add': 'd-flex justify-content-end',
+            'error.class_add': 'd-flex justify-content-end'
         }
     )
     factory.register_macro('arrayfield', 'field:label:help:error', {})
