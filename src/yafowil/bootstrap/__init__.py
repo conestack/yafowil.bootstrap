@@ -142,6 +142,12 @@ bs5_resources.add(wr.StyleResource(
     resource='bootstrap.css',
     compressed='bootstrap.min.css'
 ))
+bs5_resources.add(wr.StyleResource(
+    name='bootstrap-icons-css',
+    directory=bs5_styles_dir,
+    path='bootstrap/fonts',
+    resource='bootstrap-icons.css'
+))
 
 # B/C resources ##############################################################
 
