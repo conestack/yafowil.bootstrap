@@ -6,8 +6,10 @@ def configure_factory():
     # set theme
     factory.theme = 'bootstrap5'
 
+    factory.defaults['fieldset.class'] = 'mb-3'
+
     # wrapper div for one input
-    factory.defaults['field.class'] = 'field mb-3'
+    factory.defaults['field.class'] = 'field'
 
     # label marker
     factory.defaults['label.class'] = 'form-label'
@@ -100,7 +102,7 @@ def register_macros():
         'button',
         {
             'button.class': 'btn',
-            'button.class_add': 'btn-primary'
+            'button.class_add': 'btn-primary mb-3'
         }
     )
 
@@ -112,7 +114,7 @@ def register_macros():
             'array.label': ' ',
             'label.class_add': '',
             'array.class_add': 'd-flex justify-content-end',
-            'help.class_add': 'd-flex justify-content-end',
+            'help.class_add': '',
             'error.class_add': 'd-flex justify-content-end'
         }
     )
