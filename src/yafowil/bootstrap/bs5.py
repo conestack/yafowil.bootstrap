@@ -37,8 +37,8 @@ def configure_factory():
         factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
 
 
-    factory.defaults['submit.class'] = 'btn btn-primary text-light'
-    factory.defaults['button.class'] = 'btn btn-primary text-light'
+    factory.defaults['submit.class'] = 'btn btn-primary text-light mb-3'
+    factory.defaults['button.class'] = 'btn btn-primary text-light mb-3'
 
     factory.defaults['error.position'] = 'after'
     factory.defaults['error.tag'] = 'div'
