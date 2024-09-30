@@ -74,10 +74,13 @@ def configure_factory():
     factory.defaults['array.table_class'] = 'table table-sm'
 
     # yafowil.widget.autocomplete
-    factory.defaults['autocomplete.class'] = 'autocomplete form-control'
+    factory.defaults['autocomplete.class'] = 'autocomplete form-control mb-3'
 
     # yafowil.widget.chosen
     factory.defaults['chosen.class'] = 'chosen form-control'
+
+    # yafowil.widget.color
+    factory.defaults['color.block_class'] = 'color form-control'
 
     # yafowil.widget.datetime
     factory.defaults['datetime.datepicker_class'] = 'datepicker form-control'

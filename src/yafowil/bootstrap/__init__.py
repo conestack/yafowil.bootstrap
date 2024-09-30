@@ -129,6 +129,12 @@ bs5_resources = wr.ResourceGroup(
     path='bootstrap'
 )
 bs5_resources.add(wr.ScriptResource(
+    name='popper-js',
+    directory=bs5_scripts_dir,
+    path='bootstrap/js',
+    resource='popper.min.js'
+))
+bs5_resources.add(wr.ScriptResource(
     name='bootstrap-js',
     directory=bs5_scripts_dir,
     path='bootstrap/js',
@@ -152,6 +158,10 @@ bs5_resources.add(wr.StyleResource(
 # B/C resources ##############################################################
 
 js_bs5 = [{
+    'group': 'bootstrap.dependencies',
+    'resource': 'js/popper.min.js',
+    'order': 20
+}, {
     'group': 'bootstrap.dependencies',
     'resource': 'js/bootstrap.min.js',
     'order': 20
