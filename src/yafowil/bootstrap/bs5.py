@@ -86,6 +86,9 @@ def configure_factory():
     factory.defaults['datetime.datepicker_class'] = 'datepicker form-control'
     factory.defaults['datetime.timepicker_class'] = 'timepicker form-control'
     factory.defaults['time.timepicker_class'] = 'timepicker form-control'
+    factory.defaults['datetime.datepicker_wrapper_class'] = 'input-group'
+    factory.defaults['datetime.timepicker_wrapper_class'] = 'input-group'
+    factory.defaults['time.timepicker_wrapper_class'] = 'input-group'
 
     # yafowil.widget.dict
     factory.defaults['dict.table_class'] = 'dictwidget table table-sm'
@@ -94,6 +97,16 @@ def configure_factory():
 
     # yafowil.widget.wysihtml5
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
+
+    # yafowil.widget.image
+    factory.defaults['image.class'] = 'image form-control mt-3 mb-2'
+    factory.defaults['image.radio_class'] = 'form-check'
+    factory.defaults['image.radio_input_class'] = 'form-check-input'
+
+    # yafowil.file
+    factory.defaults['file.class'] = 'form-control mt-3 mb-2'
+    factory.defaults['file.radio_class'] = 'form-check'
+    factory.defaults['file.radio_input_class'] = 'form-check-input'
 
 
 def register_macros():
