@@ -6,8 +6,6 @@ def configure_factory():
     # set theme
     factory.theme = 'bootstrap5'
 
-    factory.defaults['fieldset.class'] = 'mb-3'
-
     # wrapper div for one input
     factory.defaults['field.class'] = 'field'
 
@@ -36,7 +34,6 @@ def configure_factory():
         factory.defaults['{0}.error_class'.format(blueprint_name)] = 'is-invalid'
         factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
 
-
     factory.defaults['submit.class'] = 'btn btn-primary text-light mb-3'
     factory.defaults['button.class'] = 'btn btn-primary text-light mb-3'
 
@@ -57,10 +54,10 @@ def configure_factory():
     factory.defaults['select.error_class'] = 'is-invalid'
     factory.defaults['select.valid_class'] = 'is-valid'
     factory.defaults['select.block_class'] = 'form-control'
-    factory.defaults['select.radio_input_class'] = 'form-check-input ms-3'
+    factory.defaults['select.radio_input_class'] = 'form-check-input'
     factory.defaults['select.radio_label_class'] = 'form-check-label'
     factory.defaults['select.radio_wrapper_class'] = 'form-check'
-    factory.defaults['select.checkbox_input_class'] = 'form-check-input ms-3'
+    factory.defaults['select.checkbox_input_class'] = 'form-check-input'
     factory.defaults['select.checkbox_label_class'] = 'form-check-label'
     factory.defaults['select.checkbox_wrapper_class'] = 'form-check'
     factory.defaults['select.listing_label_position'] = 'after'
@@ -68,19 +65,27 @@ def configure_factory():
     # single checkbox
     factory.defaults['checkbox.error_class'] = 'is-invalid'
     factory.defaults['checkbox.valid_class'] = 'is-valid'
-    factory.defaults['checkbox.class'] = 'form-check-input ms-3'
+    factory.defaults['checkbox.class'] = 'form-check-input'
+
+    # yafowil.widget.ace
+    factory.defaults['ace.wrapper_class'] = 'ace-editor-wrapper card'
 
     # yafowil.widget.array
     factory.defaults['array.table_class'] = 'table table-sm'
 
     # yafowil.widget.autocomplete
-    factory.defaults['autocomplete.class'] = 'autocomplete form-control mb-3'
+    factory.defaults['autocomplete.class'] = 'autocomplete form-control'
 
     # yafowil.widget.chosen
     factory.defaults['chosen.class'] = 'chosen form-control'
 
     # yafowil.widget.color
     factory.defaults['color.block_class'] = 'color form-control'
+    factory.defaults['color.placement'] = 'bottom-start'
+    factory.doc['props']['color.placement'] = """\
+        Specify the color picker dropdown's placement.
+        Supply any supported value from the popper.js library.
+    """
 
     # yafowil.widget.datetime
     factory.defaults['datetime.datepicker_class'] = 'datepicker form-control'
@@ -104,9 +109,16 @@ def configure_factory():
     factory.defaults['image.radio_input_class'] = 'form-check-input'
 
     # yafowil.file
-    factory.defaults['file.class'] = 'form-control mt-3 mb-2'
+    factory.defaults['file.class'] = 'form-control mb-2'
     factory.defaults['file.radio_class'] = 'form-check'
     factory.defaults['file.radio_input_class'] = 'form-check-input'
+
+    # yafowil.widget.cron
+    factory.defaults['cron.edit_container_class'] = 'edit-container card'
+    factory.defaults['cron.editarea_class'] = 'editarea card-body'
+    factory.defaults['cron.options_container_class'] = 'card-header pt-0'
+    factory.defaults['cron.options_header_class'] = 'nav nav-tabs card-header-tabs'
+    factory.defaults['cron.edit_btn_class'] = 'nav-link edit'
 
 
 def register_macros():
@@ -115,10 +127,12 @@ def register_macros():
     factory.register_macro('field', 'field:label:help:error', {})
     factory.register_macro(
         'button',
-        'button',
+        'submit',
         {
             'button.class': 'btn',
-            'button.class_add': 'btn-primary mb-3'
+            'button.class_add': 'btn-primary my-3',
+            'submit.class': 'btn',
+            'submit.class_add': 'btn-primary my-3'
         }
     )
 
