@@ -122,6 +122,7 @@ css_bs4 = [{
 bs5_resources_dir = os.path.join(resources_dir, 'bs5')
 bs5_scripts_dir = os.path.join(bs5_resources_dir, 'js')
 bs5_styles_dir = os.path.join(bs5_resources_dir, 'css')
+bs5_fonts_dir = os.path.join(bs5_resources_dir, 'fonts')
 
 bs5_resources = wr.ResourceGroup(
     name='yafowil.bootstrap',
@@ -150,7 +151,7 @@ bs5_resources.add(wr.StyleResource(
 ))
 bs5_resources.add(wr.StyleResource(
     name='bootstrap-icons-css',
-    directory=bs5_styles_dir,
+    directory=bs5_fonts_dir,
     path='bootstrap/fonts',
     resource='bootstrap-icons.css'
 ))
@@ -169,6 +170,10 @@ js_bs5 = [{
 css_bs5 = [{
     'group': 'bootstrap.dependencies',
     'resource': 'css/bootstrap.min.css',
+    'order': 10
+}, {
+    'group': 'bootstrap.dependencies',
+    'resource': 'fonts/bootstrap-icons.css',
     'order': 10
 }]
 

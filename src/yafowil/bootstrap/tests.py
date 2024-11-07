@@ -107,26 +107,40 @@ class TestBootstrap(NodeTestCase):
         self.assertEqual(resources.path, 'bootstrap')
 
         scripts = resources.scripts
-        self.assertEqual(len(scripts), 1)
+        self.assertEqual(len(scripts), 2)
 
         self.assertTrue(scripts[0].directory.endswith(np('/bs5/js')))
         self.assertEqual(scripts[0].path, 'bootstrap/js')
-        self.assertEqual(scripts[0].file_name, 'bootstrap.min.js')
+        self.assertEqual(scripts[0].file_name, 'popper.min.js')
         self.assertTrue(os.path.exists(scripts[0].file_path))
 
+        self.assertTrue(scripts[1].directory.endswith(np('/bs5/js')))
+        self.assertEqual(scripts[1].path, 'bootstrap/js')
+        self.assertEqual(scripts[1].file_name, 'bootstrap.min.js')
+        self.assertTrue(os.path.exists(scripts[1].file_path))
+
         styles = resources.styles
-        self.assertEqual(len(styles), 1)
+        self.assertEqual(len(styles), 2)
 
         self.assertTrue(styles[0].directory.endswith(np('/bs5/css')))
         self.assertEqual(styles[0].path, 'bootstrap/css')
         self.assertEqual(styles[0].file_name, 'bootstrap.min.css')
         self.assertTrue(os.path.exists(styles[0].file_path))
 
+        self.assertTrue(styles[1].directory.endswith(np('/bs5/fonts')))
+        self.assertEqual(styles[1].path, 'bootstrap/fonts')
+        self.assertEqual(styles[1].file_name, 'bootstrap-icons.css')
+        self.assertTrue(os.path.exists(styles[1].file_path))
+
+
         resolver = wr.ResourceResolver(resources)
         renderer = wr.ResourceRenderer(resolver, base_url='')
         self.checkOutput("""
+        <script src="/bootstrap/js/popper.min.js"></script>
         <script src="/bootstrap/js/bootstrap.min.js"></script>
         <link href="/bootstrap/css/bootstrap.min.css" media="all"
+              rel="stylesheet" type="text/css" />
+        <link href="/bootstrap/fonts/bootstrap-icons.css" media="all"
               rel="stylesheet" type="text/css" />
         """, renderer.render())
 
