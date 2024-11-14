@@ -1,4 +1,4 @@
-name: Tests
+name: Python tests
 
 on: [push]
 
@@ -16,8 +16,6 @@ jobs:
           - macos-latest
 
         python:
-          - "3.7"
-          - "3.8"
           - "3.9"
           - "3.10"
           - "3.11"
@@ -46,9 +44,9 @@ jobs:
       - name: Run tests
         run: |
           python --version
-          python -m yafowil.bootstrap.tests
+          python -m pytest src/yafowil/bootstrap/tests
 
       - name: Run coverage
         run: |
-          coverage run --source=src/yafowil -m yafowil.bootstrap.tests
+          coverage run --source=src/yafowil -m pytest src/yafowil/bootstrap/tests
           coverage report -m --fail-under=48
