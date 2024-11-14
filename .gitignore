@@ -1,5 +1,10 @@
-*~
-*#*
-*.pyc
 *.egg-info
+*.pyc
+/.coverage
+/.mxmake
+/.ruff_cache
+/build
 /dist/
+/htmlcov/
+/requirements-mxdev.txt
+/venv

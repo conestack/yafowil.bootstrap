@@ -8,7 +8,7 @@ def read_file(name):
         return f.read()
 
 
-version = '2.0.0.dev0'
+version = '2.0.0a3.dev0'
 shortdesc = 'Bootstrap Styles for YAFOWIL'
 longdesc = '\n\n'.join([read_file(name) for name in [
     'README.rst',
@@ -44,6 +44,10 @@ setup(
         'webresource',
         'yafowil>2.2.99'
     ],
+    extras_require=dict(test=[
+        'coverage',
+        'pytest'
+    ]),
     entry_points="""
     [yafowil.plugin]
     register = yafowil.bootstrap:register

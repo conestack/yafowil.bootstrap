@@ -1,0 +1,48 @@
+name: Python tests
+
+on: [push]
+
+jobs:
+  test:
+    name: Test ${{ matrix.python }} - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+        python:
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+
+        exclude:
+          # excludes py3.9 on macOS
+          - os: macos-latest
+            python: "3.9"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install
+        run: |
+          pip install -e .[test]
+
+      - name: Run tests
+        run: |
+          python --version
+          python -m pytest src/yafowil/bootstrap/tests
+
+      - name: Run coverage
+        run: |
+          coverage run --source=src/yafowil -m pytest src/yafowil/bootstrap/tests
+          coverage report -m --fail-under=47
