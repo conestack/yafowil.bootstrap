@@ -4,7 +4,11 @@ Changes
 2.0.0a3 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Add Makefile.
+  [lenadax]
+
+- Configure tests to run with pytest.
+  [lenadax]
 
 
 2.0.0a2 (2024-04-30)
