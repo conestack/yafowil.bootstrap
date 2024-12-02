@@ -7,7 +7,7 @@ def configure_factory():
     factory.theme = 'bootstrap5'
 
     # wrapper div for one input
-    factory.defaults['field.class'] = 'field'
+    factory.defaults['field.class'] = 'field mb-2'
 
     # label marker
     factory.defaults['label.class'] = 'form-label'
