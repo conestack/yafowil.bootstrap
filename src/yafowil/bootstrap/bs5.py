@@ -27,7 +27,7 @@ def configure_factory():
         'url',
         'search',
         'number',
-        'file',
+        'file'
     ]
     for blueprint_name in bs5_input_blueprints:
         factory.defaults['{0}.class'.format(blueprint_name)] = 'form-control'
@@ -68,18 +68,24 @@ def configure_factory():
     factory.defaults['checkbox.class'] = 'form-check-input'
 
     # yafowil.widget.ace
+    factory.defaults['ace.error_class'] = 'is-invalid'
+    factory.defaults['ace.valid_class'] = 'is-valid'
     factory.defaults['ace.wrapper_class'] = 'ace-editor-wrapper card'
 
     # yafowil.widget.array
     factory.defaults['array.table_class'] = 'table table-sm'
 
     # yafowil.widget.autocomplete
+    factory.defaults['autocomplete.error_class'] = 'is-invalid'
+    factory.defaults['autocomplete.valid_class'] = 'is-valid'
     factory.defaults['autocomplete.class'] = 'autocomplete form-control'
 
     # yafowil.widget.chosen
     factory.defaults['chosen.class'] = 'chosen form-control'
 
     # yafowil.widget.color
+    factory.defaults['color.error_class'] = 'is-invalid'
+    factory.defaults['color.valid_class'] = 'is-valid'
     factory.defaults['color.block_class'] = 'color form-control'
     factory.defaults['color.placement'] = 'bottom-start'
     factory.doc['props']['color.placement'] = """\
@@ -88,11 +94,15 @@ def configure_factory():
     """
 
     # yafowil.widget.datetime
+    factory.defaults['datetime.error_class'] = 'is-invalid'
+    factory.defaults['datetime.valid_class'] = 'is-valid'
+    factory.defaults['time.error_class'] = 'is-invalid'
+    factory.defaults['time.valid_class'] = 'is-valid'
     factory.defaults['datetime.datepicker_class'] = 'datepicker form-control'
     factory.defaults['datetime.timepicker_class'] = 'timepicker form-control'
     factory.defaults['time.timepicker_class'] = 'timepicker form-control'
-    factory.defaults['datetime.datepicker_wrapper_class'] = 'input-group'
-    factory.defaults['datetime.timepicker_wrapper_class'] = 'input-group'
+    factory.defaults['datetime.datepicker_wrapper_class'] = 'input-group has-validation'
+    factory.defaults['datetime.timepicker_wrapper_class'] = 'input-group has-validation'
     factory.defaults['time.timepicker_wrapper_class'] = 'input-group'
 
     # yafowil.widget.dict
@@ -104,6 +114,8 @@ def configure_factory():
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
 
     # yafowil.widget.image
+    factory.defaults['image.error_class'] = 'is-invalid'
+    factory.defaults['image.valid_class'] = 'is-valid'
     factory.defaults['image.class'] = 'image form-control mt-3 mb-2'
     factory.defaults['image.radio_class'] = 'form-check'
     factory.defaults['image.radio_input_class'] = 'form-check-input'
@@ -119,6 +131,10 @@ def configure_factory():
     factory.defaults['cron.options_container_class'] = 'card-header pt-0'
     factory.defaults['cron.options_header_class'] = 'nav nav-tabs card-header-tabs'
     factory.defaults['cron.edit_btn_class'] = 'nav-link edit'
+
+    # yafowil.widget.tiptap
+    factory.defaults['tiptap.error_class'] = 'is-invalid'
+    factory.defaults['tiptap.valid_class'] = 'is-valid'
 
 
 def register_macros():
