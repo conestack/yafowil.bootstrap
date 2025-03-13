@@ -73,6 +73,8 @@ def configure_factory():
     factory.defaults['ace.wrapper_class'] = 'ace-editor-wrapper card'
 
     # yafowil.widget.array
+    factory.defaults['array.error_class'] = 'is-invalid'
+    factory.defaults['array.valid_class'] = 'is-valid'
     factory.defaults['array.table_class'] = 'table table-sm'
 
     # yafowil.widget.autocomplete
@@ -105,7 +107,13 @@ def configure_factory():
     factory.defaults['datetime.timepicker_wrapper_class'] = 'input-group has-validation'
     factory.defaults['time.timepicker_wrapper_class'] = 'input-group'
 
+    # yafowil.widget.select2
+    factory.defaults['select2.error_class'] = 'is-invalid'
+    factory.defaults['select2.valid_class'] = 'is-valid'
+
     # yafowil.widget.dict
+    factory.defaults['dict.error_class'] = 'is-invalid'
+    factory.defaults['dict.valid_class'] = 'is-valid'
     factory.defaults['dict.table_class'] = 'dictwidget table table-sm'
     factory.defaults['dict.key_class'] = 'form-control'
     factory.defaults['dict.value_class'] = 'form-control'
@@ -119,6 +127,10 @@ def configure_factory():
     factory.defaults['image.class'] = 'image form-control mt-3 mb-2'
     factory.defaults['image.radio_class'] = 'form-check'
     factory.defaults['image.radio_input_class'] = 'form-check-input'
+
+    # yafowil.widget.location
+    factory.defaults['location.error_class'] = 'is-invalid'
+    factory.defaults['location.valid_class'] = 'is-valid'
 
     # yafowil.file
     factory.defaults['file.class'] = 'form-control mb-2'
