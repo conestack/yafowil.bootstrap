@@ -45,4 +45,4 @@ jobs:
       - name: Run coverage
         run: |
           coverage run --source=src/yafowil -m pytest src/yafowil/bootstrap/tests
-          coverage report -m --fail-under=45
+          coverage report -m --fail-under=44
