@@ -85,6 +85,7 @@ def configure_factory():
     factory.defaults['autocomplete.error_class'] = 'is-invalid'
     factory.defaults['autocomplete.valid_class'] = 'is-valid'
     factory.defaults['autocomplete.class'] = 'autocomplete form-control'
+    factory.defaults['autocomplete.display_class'] = 'disabled text-muted'
 
     # yafowil.widget.chosen
     factory.defaults['chosen.class'] = 'chosen form-control'
