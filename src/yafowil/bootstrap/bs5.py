@@ -31,6 +31,7 @@ def configure_factory():
     ]
     for blueprint_name in bs5_input_blueprints:
         factory.defaults['{0}.class'.format(blueprint_name)] = 'form-control'
+        factory.defaults['{0}.display_class'.format(blueprint_name)] = 'form-control disabled text-muted'
         factory.defaults['{0}.error_class'.format(blueprint_name)] = 'is-invalid'
         factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
 
@@ -53,6 +54,8 @@ def configure_factory():
     # select
     factory.defaults['select.error_class'] = 'is-invalid'
     factory.defaults['select.valid_class'] = 'is-valid'
+    factory.defaults['select.display_class'] = 'list-group disabled'
+    factory.defaults['select.display_item_class'] = 'list-group-item disabled'
     factory.defaults['select.block_class'] = 'form-select'
     factory.defaults['select.radio_input_class'] = 'form-check-input'
     factory.defaults['select.radio_label_class'] = 'form-check-label'
@@ -66,6 +69,7 @@ def configure_factory():
     factory.defaults['checkbox.error_class'] = 'is-invalid'
     factory.defaults['checkbox.valid_class'] = 'is-valid'
     factory.defaults['checkbox.class'] = 'form-check-input'
+    factory.defaults['checkbox.display_class'] = 'form-control disabled text-muted'
 
     # yafowil.widget.ace
     factory.defaults['ace.error_class'] = 'is-invalid'
