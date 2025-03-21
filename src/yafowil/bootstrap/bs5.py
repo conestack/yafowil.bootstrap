@@ -111,6 +111,10 @@ def configure_factory():
     factory.defaults['datetime.datepicker_wrapper_class'] = 'input-group has-validation'
     factory.defaults['datetime.timepicker_wrapper_class'] = 'input-group has-validation'
     factory.defaults['time.timepicker_wrapper_class'] = 'input-group'
+    factory.defaults['datetime.display_class'] = 'form-control disabled text-muted'
+    factory.defaults['time.display_class'] = 'form-control disabled text-muted'
+    factory.defaults['datetime.empty_display_value'] = 'N/A'
+    factory.defaults['time.empty_display_value'] = 'N/A'
 
     # yafowil.widget.select2
     factory.defaults['select2.error_class'] = 'is-invalid'
