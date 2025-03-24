@@ -113,12 +113,12 @@ def configure_factory():
     factory.defaults['time.timepicker_wrapper_class'] = 'input-group'
     factory.defaults['datetime.display_class'] = 'form-control disabled text-muted'
     factory.defaults['time.display_class'] = 'form-control disabled text-muted'
-    factory.defaults['datetime.empty_display_value'] = 'N/A'
-    factory.defaults['time.empty_display_value'] = 'N/A'
 
     # yafowil.widget.select2
     factory.defaults['select2.error_class'] = 'is-invalid'
     factory.defaults['select2.valid_class'] = 'is-valid'
+    factory.defaults['select2.display_class'] = 'form-control disabled text-muted'
+    factory.defaults['select2.display_item_class'] = 'list-group-item text-muted'
 
     # yafowil.widget.dict
     factory.defaults['dict.error_class'] = 'is-invalid'
@@ -126,6 +126,7 @@ def configure_factory():
     factory.defaults['dict.table_class'] = 'dictwidget table table-sm'
     factory.defaults['dict.key_class'] = 'form-control'
     factory.defaults['dict.value_class'] = 'form-control'
+    factory.defaults['dict.display_class'] = 'card card-body'
 
     # yafowil.widget.wysihtml5
     factory.defaults['wysihtml5.class'] = 'wysihtml5 form-control'
@@ -140,6 +141,7 @@ def configure_factory():
     # yafowil.widget.location
     factory.defaults['location.error_class'] = 'is-invalid'
     factory.defaults['location.valid_class'] = 'is-valid'
+    factory.defaults['location.display_class'] = 'border overflow-hidden rounded'
 
     # yafowil.file
     factory.defaults['file.class'] = 'form-control mb-2'
@@ -156,6 +158,7 @@ def configure_factory():
     # yafowil.widget.tiptap
     factory.defaults['tiptap.error_class'] = 'is-invalid'
     factory.defaults['tiptap.valid_class'] = 'is-valid'
+    factory.defaults['tiptap.display_class'] = 'form-control'
 
 
 def register_macros():
