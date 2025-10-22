@@ -13,6 +13,11 @@ classifiers = [
     "Environment :: Web Environment",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     "License :: OSI Approved :: BSD License",
 ]
@@ -30,8 +35,8 @@ test = [
 [project.entry-points."yafowil.plugin"]
 register = "yafowil.bootstrap:register"
 
-
 [tool.hatch.build.targets.wheel]
 packages = ["src/yafowil"]
+
 [tool.zest-releaser]
 create-wheel = true
