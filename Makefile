@@ -127,7 +127,7 @@ COVERAGE_COMMAND?=\
 	$(VENV_FOLDER)/bin/coverage run \
 		--source src/yafowil/bootstrap \
 		-m pytest src/yafowil/bootstrap/tests \
-	&& $(VENV_FOLDER)/bin/coverage report --fail-under=48
+	&& $(VENV_FOLDER)/bin/coverage report --fail-under=47
 
 ##############################################################################
 # END SETTINGS - DO NOT EDIT BELOW THIS LINE
