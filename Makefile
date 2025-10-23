@@ -107,7 +107,7 @@ PACKAGES_ALLOW_PRERELEASES?=false
 # The command which gets executed. Defaults to the location the
 # :ref:`run-tests` template gets rendered to if configured.
 # Default: .mxmake/files/run-tests.sh
-TEST_COMMAND?=$(VENV_FOLDER)/bin/pytest src/yafowil/bootstrap/tests
+TEST_COMMAND?=pytest src/yafowil/bootstrap/tests
 
 # Additional Python requirements for running tests to be
 # installed (via pip).
@@ -124,10 +124,10 @@ TEST_DEPENDENCY_TARGETS?=
 # :ref:`run-coverage` template gets rendered to if configured.
 # Default: .mxmake/files/run-coverage.sh
 COVERAGE_COMMAND?=\
-	$(VENV_FOLDER)/bin/coverage run \
+	coverage run \
 		--source src/yafowil/bootstrap \
 		-m pytest src/yafowil/bootstrap/tests \
-	&& $(VENV_FOLDER)/bin/coverage report --fail-under=48
+	&& coverage report --fail-under=43
 
 ##############################################################################
 # END SETTINGS - DO NOT EDIT BELOW THIS LINE

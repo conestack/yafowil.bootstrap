@@ -122,12 +122,19 @@ css_bs4 = [{
 bs5_resources_dir = os.path.join(resources_dir, 'bs5')
 bs5_scripts_dir = os.path.join(bs5_resources_dir, 'js')
 bs5_styles_dir = os.path.join(bs5_resources_dir, 'css')
+bs5_fonts_dir = os.path.join(bs5_resources_dir, 'fonts')
 
 bs5_resources = wr.ResourceGroup(
     name='yafowil.bootstrap',
     directory=bs5_resources_dir,
     path='bootstrap'
 )
+bs5_resources.add(wr.ScriptResource(
+    name='popper-js',
+    directory=bs5_scripts_dir,
+    path='bootstrap/js',
+    resource='popper.min.js'
+))
 bs5_resources.add(wr.ScriptResource(
     name='bootstrap-js',
     directory=bs5_scripts_dir,
@@ -142,10 +149,20 @@ bs5_resources.add(wr.StyleResource(
     resource='bootstrap.css',
     compressed='bootstrap.min.css'
 ))
+bs5_resources.add(wr.StyleResource(
+    name='bootstrap-icons-css',
+    directory=bs5_fonts_dir,
+    path='bootstrap/fonts',
+    resource='bootstrap-icons.css'
+))
 
 # B/C resources ##############################################################
 
 js_bs5 = [{
+    'group': 'bootstrap.dependencies',
+    'resource': 'js/popper.min.js',
+    'order': 20
+}, {
     'group': 'bootstrap.dependencies',
     'resource': 'js/bootstrap.min.js',
     'order': 20
@@ -153,6 +170,10 @@ js_bs5 = [{
 css_bs5 = [{
     'group': 'bootstrap.dependencies',
     'resource': 'css/bootstrap.min.css',
+    'order': 10
+}, {
+    'group': 'bootstrap.dependencies',
+    'resource': 'fonts/bootstrap-icons.css',
     'order': 10
 }]
 

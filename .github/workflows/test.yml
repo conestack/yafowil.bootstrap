@@ -32,14 +32,12 @@ jobs:
 
       - name: Install
         run: |
-          pip install -e .[test]
+          make install
 
       - name: Run tests
         run: |
-          python --version
-          python -m pytest src/yafowil/bootstrap/tests
+          make test
 
       - name: Run coverage
         run: |
-          coverage run --source=src/yafowil -m pytest src/yafowil/bootstrap/tests
-          coverage report -m --fail-under=48
+          make coverage
