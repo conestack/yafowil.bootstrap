@@ -8,7 +8,7 @@ def read_file(name):
         return f.read()
 
 
-version = '1.3.3.dev0'
+version = '1.3.3'
 shortdesc = 'Bootstrap Styles for YAFOWIL'
 longdesc = '\n\n'.join([read_file(name) for name in [
     'README.rst',
