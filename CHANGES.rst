@@ -4,7 +4,8 @@ Changes
 1.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Pin upper versions of dependencies.
+  [rnix]
 
 
 1.3.2 (2022-12-05)

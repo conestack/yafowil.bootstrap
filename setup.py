@@ -41,7 +41,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'yafowil>1.99',
+        'yafowil>1.99,<4.0.0',
     ],
     extras_require=dict(
         test=[
