@@ -1,8 +1,8 @@
 Changes
 =======
 
-2.0.0a3 (unreleased)
---------------------
+2.0.0 (unreleased)
+------------------
 
 - Add Makefile.
   [lenadax]
