@@ -22,7 +22,7 @@ classifiers = [
     "License :: OSI Approved :: BSD License",
 ]
 dependencies = [
-    "webresource",
+    "webresource>1.2.99",
     "yafowil>3.99",
 ]
 
