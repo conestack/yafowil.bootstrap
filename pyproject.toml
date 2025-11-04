@@ -23,7 +23,7 @@ classifiers = [
 ]
 dependencies = [
     "webresource",
-    "yafowil>2.2.99",
+    "yafowil>3.99",
 ]
 
 [project.optional-dependencies]
