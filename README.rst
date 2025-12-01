@@ -1,3 +1,6 @@
+yafowil.bootstrap
+=================
+
 .. image:: https://img.shields.io/pypi/v/yafowil.bootstrap.svg
     :target: https://pypi.python.org/pypi/yafowil.bootstrap
     :alt: Latest PyPI version
@@ -12,8 +15,30 @@
 .. image:: https://coveralls.io/repos/github/bluedynamics/yafowil.bootstrap/badge.svg?branch=master
     :target: https://coveralls.io/github/bluedynamics/yafowil.bootstrap?branch=master
 
-This is the **bootstrap styles integration** for for `YAFOWIL 
-<http://pypi.python.org/pypi/yafowil>`_ - Yet Another Form Widget Library.
+**bootstrap styles integration** for for `YAFOWIL <http://pypi.python.org/pypi/yafowil>`_
+- Yet Another Form Widget Library.
+
+This package provides themes for Bootstrap 3, 4 and 5.
+
+In order to select one of the bootstrap versions, ``configure_factory`` must be
+called with the desired theme name:
+
+.. code-block:: python
+
+    from yafowil.bootstrap import configure_factory
+
+    # bootstap3, bootstrap4, bootstrap5
+    configure_factory('bootstrap5')
+
+Included Bootstrap distributions:
+
+* Bootstrap 3.4.1
+* Bootstrap 4.6.0
+* Bootstrap 5.1.0
+
+``yafowil.bootstrap`` 2.0 is a transitional version. in 3.0 the bootstrap
+distributions will be removed as resource delivery is planned to be changed
+to ``webresource``.
 
 
 Detailed Documentation
