@@ -41,6 +41,13 @@ Changes
   [jensens, agitator]
 
 
+1.3.3 (2025-10-28)
+------------------
+
+- Pin upper versions of dependencies.
+  [rnix]
+
+
 1.3.2 (2022-12-05)
 ------------------
 
