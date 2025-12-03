@@ -9,11 +9,9 @@ yafowil.bootstrap
     :target: https://pypi.python.org/pypi/yafowil.bootstrap
     :alt: Number of PyPI downloads
 
-.. image:: https://travis-ci.org/bluedynamics/yafowil.bootstrap.svg?branch=master
-    :target: https://travis-ci.org/bluedynamics/yafowil.bootstrap
-
-.. image:: https://coveralls.io/repos/github/bluedynamics/yafowil.bootstrap/badge.svg?branch=master
-    :target: https://coveralls.io/github/bluedynamics/yafowil.bootstrap?branch=master
+.. image:: https://github.com/conestack/yafowil.bootstrap/actions/workflows/test.yml/badge.svg
+    :target: https://github.com/conestack/yafowil.bootstrap/actions/workflows/test.yml
+    :alt: Test yafowil.bootstrap
 
 **bootstrap styles integration** for for `YAFOWIL <http://pypi.python.org/pypi/yafowil>`_
 - Yet Another Form Widget Library.
