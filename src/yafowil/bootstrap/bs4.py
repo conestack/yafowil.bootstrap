@@ -43,7 +43,7 @@ def configure_factory():
     factory.defaults['help.tag'] = 'small'
     factory.defaults['help.class'] = 'form-text text-muted'
 
-    # file
+    # file inputs use ``form-control-file`` instead of ``form-control``
     factory.defaults['file.class'] = 'form-control-file'
 
     # select
@@ -102,8 +102,8 @@ def register_macros():
             'array.label': ' ',
             'label.class_add': 'col-sm-2',
             'array.class_add': 'col-sm-10',
-            'help.class_add': 'col-sm-offset-2 col-sm-10',
-            'error.class_add': 'col-sm-offset-2 col-sm-10',
+            'help.class_add': 'offset-sm-2 col-sm-10',
+            'error.class_add': 'offset-sm-2 col-sm-10',
         },
     )
     factory.register_macro('arrayfield', 'field:label:help:error', {})

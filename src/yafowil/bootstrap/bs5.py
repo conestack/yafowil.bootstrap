@@ -49,9 +49,6 @@ def configure_factory():
     factory.defaults['help.tag'] = 'div'
     factory.defaults['help.class'] = 'form-text'
 
-    # file
-    factory.defaults['file.class'] = 'form-control'
-
     # select
     factory.defaults['select.error_class'] = 'is-invalid'
     factory.defaults['select.valid_class'] = 'is-valid'
@@ -170,8 +167,6 @@ def register_macros():
         'button',
         'submit',
         {
-            'button.class': 'btn',
-            'button.class_add': 'btn-primary my-3',
             'submit.class': 'btn',
             'submit.class_add': 'btn-primary my-3',
         },

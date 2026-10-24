@@ -4,6 +4,15 @@ Changes
 2.0.1 (unreleased)
 ------------------
 
+- Fix the bootstrap 4 ``array`` macro using the bootstrap 3 grid class
+  ``col-sm-offset-2`` for help and error, it is ``offset-sm-2`` in bootstrap 4.
+  [rnix]
+
+- Remove settings without effect: the bootstrap 5 ``file.class`` default
+  overwritten later in ``configure_factory`` and the ``button.class`` props of
+  the bootstrap 5 ``button`` macro, which renders a ``submit`` blueprint.
+  [rnix]
+
 - Modernise the code ruff flags as outdated: ``.format()`` over f-strings.
   Behaviour unchanged. ``super(Class, self)`` is kept, see ``cone.app``.
   [rnix]

@@ -568,8 +568,8 @@ class TestBootstrap4(BootstrapTestCase):
                     'array.label': ' ',
                     'label.class_add': 'col-sm-2',
                     'array.class_add': 'col-sm-10',
-                    'help.class_add': 'col-sm-offset-2 col-sm-10',
-                    'error.class_add': 'col-sm-offset-2 col-sm-10',
+                    'help.class_add': 'offset-sm-2 col-sm-10',
+                    'error.class_add': 'offset-sm-2 col-sm-10',
                 },
             ),
         )
