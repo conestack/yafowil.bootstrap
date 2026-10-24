@@ -77,17 +77,10 @@ def register_macros():
     factory.register_macro(
         'field',
         'field:label:div:help:error',
-        {
-            'label.class_add': 'col-sm-2',
-            'div.class_add': 'col-sm-10'
-        }
+        {'label.class_add': 'col-sm-2', 'div.class_add': 'col-sm-10'},
     )
     factory.register_macro(
-        'button',
-        'submit', {
-            'submit.class': 'btn',
-            'submit.class_add': 'btn-default'
-        }
+        'button', 'submit', {'submit.class': 'btn', 'submit.class_add': 'btn-default'}
     )
 
     # yafowil.widget.array
@@ -100,7 +93,7 @@ def register_macros():
             'label.class_add': 'col-sm-2',
             'array.class_add': 'col-sm-10',
             'help.class_add': 'col-sm-offset-2 col-sm-10',
-            'error.class_add': 'col-sm-offset-2 col-sm-10'
-        }
+            'error.class_add': 'col-sm-offset-2 col-sm-10',
+        },
     )
     factory.register_macro('arrayfield', 'field:label:help:error', {})

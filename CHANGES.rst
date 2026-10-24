@@ -4,7 +4,18 @@ Changes
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Modernise the code ruff flags as outdated: ``.format()`` over f-strings.
+  Behaviour unchanged. ``super(Class, self)`` is kept, see ``cone.app``.
+  [rnix]
+
+- Sort the imports with ruff (one per line, ``from`` imports first, no
+  sections) and format the code with ``ruff format`` (90 characters per line,
+  single quotes).
+  [rnix]
+
+- Add ``qa.ruff`` domain to Makefile and pin the ruff configuration in
+  ``pyproject.toml``, ``make check`` runs ``ruff check``.
+  [rnix]
 
 
 2.0.0 (2026-02-03)

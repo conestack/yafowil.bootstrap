@@ -26,10 +26,9 @@ def configure_factory():
         'file',
     ]
     for blueprint_name in bs4_input_blueprints:
-        factory.defaults['{0}.class'.format(blueprint_name)] = 'form-control'
-        factory.defaults['{0}.error_class'.format(blueprint_name)] = 'is-invalid'
-        factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
-
+        factory.defaults[f'{blueprint_name}.class'] = 'form-control'
+        factory.defaults[f'{blueprint_name}.error_class'] = 'is-invalid'
+        factory.defaults[f'{blueprint_name}.valid_class'] = 'is-valid'
 
     factory.defaults['submit.class'] = 'btn btn-primary'
     factory.defaults['button.class'] = 'btn btn-primary'
@@ -92,12 +91,7 @@ def register_macros():
     factory.register_macro('form', 'form', {})
     factory.register_macro('field', 'field:label:help:error', {})
     factory.register_macro(
-        'button',
-        'button',
-        {
-            'button.class': 'btn',
-            'button.class_add': 'btn-primary'
-        }
+        'button', 'button', {'button.class': 'btn', 'button.class_add': 'btn-primary'}
     )
 
     # yafowil.widget.array
@@ -109,7 +103,7 @@ def register_macros():
             'label.class_add': 'col-sm-2',
             'array.class_add': 'col-sm-10',
             'help.class_add': 'col-sm-offset-2 col-sm-10',
-            'error.class_add': 'col-sm-offset-2 col-sm-10'
-        }
+            'error.class_add': 'col-sm-offset-2 col-sm-10',
+        },
     )
     factory.register_macro('arrayfield', 'field:label:help:error', {})

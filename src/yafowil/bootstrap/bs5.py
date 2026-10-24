@@ -1,5 +1,4 @@
 from yafowil.base import factory
-from yafowil.utils import attr_value
 
 
 def configure_factory():
@@ -27,13 +26,15 @@ def configure_factory():
         'url',
         'search',
         'number',
-        'file'
+        'file',
     ]
     for blueprint_name in bs5_input_blueprints:
-        factory.defaults['{0}.class'.format(blueprint_name)] = 'form-control'
-        factory.defaults['{0}.display_class'.format(blueprint_name)] = 'form-control disabled text-muted'
-        factory.defaults['{0}.error_class'.format(blueprint_name)] = 'is-invalid'
-        factory.defaults['{0}.valid_class'.format(blueprint_name)] = 'is-valid'
+        factory.defaults[f'{blueprint_name}.class'] = 'form-control'
+        factory.defaults[f'{blueprint_name}.display_class'] = (
+            'form-control disabled text-muted'
+        )
+        factory.defaults[f'{blueprint_name}.error_class'] = 'is-invalid'
+        factory.defaults[f'{blueprint_name}.valid_class'] = 'is-valid'
 
     factory.defaults['submit.class'] = 'btn btn-primary text-light mb-3'
     factory.defaults['button.class'] = 'btn btn-primary text-light mb-3'
@@ -172,8 +173,8 @@ def register_macros():
             'button.class': 'btn',
             'button.class_add': 'btn-primary my-3',
             'submit.class': 'btn',
-            'submit.class_add': 'btn-primary my-3'
-        }
+            'submit.class_add': 'btn-primary my-3',
+        },
     )
 
     # yafowil.widget.array
@@ -185,7 +186,7 @@ def register_macros():
             'label.class_add': '',
             'array.class_add': 'd-flex justify-content-end',
             'help.class_add': '',
-            'error.class_add': 'd-flex justify-content-end'
-        }
+            'error.class_add': 'd-flex justify-content-end',
+        },
     )
     factory.register_macro('arrayfield', 'field:label:help:error', {})
