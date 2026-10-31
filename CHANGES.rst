@@ -4,6 +4,9 @@ Changes
 2.0.1 (unreleased)
 ------------------
 
+- Add ``lxml`` to the ``test`` extra, the tests use ``yafowil.tests.fxml``.
+  [rnix]
+
 - Fix the bootstrap 4 ``array`` macro using the bootstrap 3 grid class
   ``col-sm-offset-2`` for help and error, it is ``offset-sm-2`` in bootstrap 4.
   [rnix]
